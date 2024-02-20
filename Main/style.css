@@ -126,13 +126,38 @@ body {
   color: var(--primary-color);
 }
 
+.traveler-cart-items-container {
+  border-radius: 20px;
+  overflow-y: auto;
+  margin-top: 10px;
+  margin-bottom: 70px;
+  padding-bottom: 80px;
+}
+
+/* custom traveler cart scrollbar */
+.traveler-cart-items-container::-webkit-scrollbar {
+  width: 5px; /* Adjust the width of the scrollbar */
+}
+
+.traveler-cart-items-container::-webkit-scrollbar-track {
+  background: #f1f1f1; /* The track of the scrollbar */
+}
+
+.traveler-cart-items-container::-webkit-scrollbar-thumb {
+  background: var(--primary-color); /* The scroll handle */
+  border-radius: 5px;
+}
+
+.traveler-cart-items-container::-webkit-scrollbar-thumb:hover {
+  background: #555; /* The scroll handle on hover */
+}
+
 .traveler-cart-item {
   font-family: Arial, sans-serif;
   max-width: 340px;
   margin: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  overflow: hidden;
 }
 
 .traveler-cart-item-header {
@@ -209,6 +234,17 @@ body {
   color: var(--primary-color);
   font-weight: bold;
   font-size: 15px;
+}
+
+.checkout-btn button {
+  border: none;
+  color: white;
+  font-weight: 600;
+  background-color: var(--primary-color);
+  position: fixed;
+  bottom: 0;
+  width: 320px;
+  padding: 20px;
 }
 
 /* Main Content */
