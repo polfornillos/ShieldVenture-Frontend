@@ -1,0 +1,126 @@
+:root {
+  --sidebar-width: 250px;
+  --primary-color: #2d6ecf;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* Ensures padding does not affect overall width */
+}
+
+body,
+html {
+  font-family: "Poppins", sans-serif;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  background-color: #f8f9fa;
+  overflow-x: hidden; /* Prevents horizontal scroll */
+}
+
+#sidebar {
+  background-color: var(--primary-color);
+  color: white;
+  width: var(--sidebar-width);
+  transition: transform 0.3s;
+  z-index: 1030;
+  height: 100vh; /* Full height */
+  position: fixed;
+}
+
+.sidebar-items {
+  margin-top: 150px;
+  gap: 25px;
+}
+
+.sidebar-items a {
+  text-decoration: none;
+  font-size: 17px;
+  color: white;
+}
+
+.sidebar-logo {
+  max-width: 210px;
+  margin-top: 40px;
+}
+
+.bottom-sidebar {
+  position: fixed;
+  bottom: 0;
+  width: var(--sidebar-width);
+  padding: 10px;
+  background-color: var(--primary-color); /* Adjust background color as needed */
+  color: black; /* Adjust text color as needed */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4); /* Shadow properties */
+}
+
+#content {
+  margin-left: var(--sidebar-width);
+  flex-grow: 1;
+  padding-top: 56px; /* Height of the navbar */
+}
+
+.navbar {
+  width: calc(100% - var(--sidebar-width));
+  position: fixed;
+  top: 0;
+  border-bottom: solid 1px rgb(192, 192, 192);
+  background-color: white;
+  z-index: 1031;
+}
+
+.navbar-icons a {
+  color: var(--primary-color);
+}
+
+.navbar-icons {
+  gap: 15px;
+}
+
+@media (min-width: 769px) {
+  .navbar-toggler {
+    display: none; /* Hide burger menu for widths 769px and above */
+  }
+
+  .navbar-brand {
+    margin-left: auto; /* Push brand to the right */
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar-items {
+    margin-top: 100px;
+    gap: 20px;
+  }
+
+  .navbar-toggler {
+    display: block; /* Show burger menu */
+  }
+
+  .navbar {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  #sidebar {
+    margin-top: 73px;
+    transform: translateX(-100%); /* Hide sidebar */
+  }
+
+  .bottom-sidebar {
+    bottom: 73px;
+  }
+
+  #sidebar.active {
+    transform: translateX(0); /* Show sidebar */
+  }
+
+  #content {
+    margin-left: 0; /* Content should not be offset */
+    width: 100%; /* Take up full width */
+  }
+}
