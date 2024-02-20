@@ -1,3 +1,4 @@
+//Function for sidebar collision
 document.addEventListener("DOMContentLoaded", function () {
   var sidebar = document.getElementById("sidebar");
   var sidebarCollapse = document.getElementById("sidebarCollapse");
