@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Sidebar Layout</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
+    <style>
+      :root {
+        --sidebar-width: 250px;
+        --primary-color: #2d6ecf;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box; /* Ensures padding does not affect overall width */
+      }
+
+      body,
+      html {
+        font-family: "Poppins", sans-serif;
+        height: 100%;
+        margin: 0;
+      }
+
+      body {
+        display: flex;
+        background-color: #f8f9fa;
+        overflow-x: hidden; /* Prevents horizontal scroll */
+      }
+
+      #sidebar {
+        background-color: var(--primary-color);
+        color: white;
+        width: var(--sidebar-width);
+        transition: transform 0.3s;
+        z-index: 1030;
+        height: 100vh; /* Full height */
+        position: fixed;
+      }
+
+      .bottom-sidebar {
+        position: fixed;
+        bottom: 0;
+        width: var(--sidebar-width);
+        padding: 10px;
+        background-color: var(--primary-color); /* Adjust background color as needed */
+        color: black; /* Adjust text color as needed */
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4); /* Shadow properties */
+      }
+      .sidebar-items {
+        margin-top: 100px;
+        gap: 15px;
+      }
+
+      .sidebar-items a {
+        text-decoration: none;
+        font-size: 17px;
+        color: white;
+      }
+
+      #content {
+        margin-left: var(--sidebar-width);
+        flex-grow: 1;
+        padding-top: 56px; /* Height of the navbar */
+      }
+
+      .navbar {
+        width: calc(100% - var(--sidebar-width));
+        position: fixed;
+        top: 0;
+        border-bottom: solid 1px rgb(192, 192, 192);
+        background-color: white;
+        z-index: 1031;
+      }
+
+      .navbar-icons {
+        gap: 20px;
+      }
+
+      .navbar-icons a {
+        color: var(--primary-color);
+      }
+
+      @media (min-width: 769px) {
+        .navbar-toggler {
+          display: none; /* Hide burger menu for widths 769px and above */
+        }
+
+        .navbar-brand {
+          margin-left: auto; /* Push brand to the right */
+        }
+      }
+
+      @media (max-width: 768px) {
+        .navbar-toggler {
+          display: block; /* Show burger menu */
+        }
+
+        .navbar {
+          width: 100%;
+          margin-left: 0;
+        }
+
+        #sidebar {
+          margin-top: 73px;
+          transform: translateX(-100%); /* Hide sidebar */
+        }
+
+        .bottom-sidebar {
+          bottom: 73px;
+        }
+
+        #sidebar.active {
+          transform: translateX(0); /* Show sidebar */
+        }
+
+        #content {
+          margin-left: 0; /* Content should not be offset */
+          width: 100%; /* Take up full width */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="sidebar">
+      <div class="d-flex justify-content-center">
+        <img src="Logo W.png" class="mt-3" style="max-width: 210px" />
+      </div>
+      <!-- Sidebar content here -->
+      <ul class="sidebar-items list-unstyled px-4 d-flex flex-column">
+        <li>
+          <a href="#">
+            <i class="fas fa-comment"></i>
+            Chat
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fas fa-users"></i>
+            Community
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fas fa-plane"></i>
+            Travel History
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fas fa-inbox"></i>
+            Inbox
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fas fa-bookmark"></i>
+            <!-- Font Awesome bookmark icon -->
+            Your Bookings
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fas fa-sign-out-alt"></i>
+            <!-- Font Awesome sign-out icon -->
+            Sign Out
+          </a>
+        </li>
+      </ul>
+      <div class="bottom-sidebar">
+        <div class="profile-info">
+          <img src="profile-picture.jpg" alt="Profile Picture" class="rounded-circle" style="width: 50px; height: 50px" />
+          <div class="user-info">
+            <p class="username">John Doe</p>
+            <p class="email">john@example.com</p>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div id="content">
+      <nav class="navbar navbar-expand-lg py-3">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" id="sidebarCollapse">
+            <span class="navbar-toggler-icon d-flex align-items-center justify-content-center">
+              <i class="fas fa-bars"></i>
+              <!-- Font Awesome bars icon -->
+            </span>
+          </button>
+          <div class="navbar-icons ml-auto d-flex mr-3">
+            <a href="#" class="mx-2"><i class="fas fa-shopping-cart fa-lg"></i></a>
+            <a href="#" class="mx-2"><i class="fas fa-bell fa-lg"></i></a>
+            <a href="#" class="mx-2"><i class="fas fa-cog fa-lg"></i></a>
+          </div>
+        </div>
+      </nav>
+      <div class="container-fluid mt-5">
+        <h2>Main Content Area</h2>
+        <p>This is the main content area.</p>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var sidebar = document.getElementById("sidebar");
+        var sidebarCollapse = document.getElementById("sidebarCollapse");
+        var content = document.getElementById("content");
+
+        // Function to handle the toggle of the sidebar
+        function toggleSidebar() {
+          sidebar.classList.toggle("active");
+          if (window.innerWidth <= 768) {
+            content.classList.toggle("active");
+          }
+        }
+
+        // Event listener for sidebar toggle button
+        sidebarCollapse.addEventListener("click", toggleSidebar);
+
+        // Event listener for window resize
+        window.addEventListener("resize", function () {
+          // If window is resized to desktop view and sidebar is hidden, show it
+          if (window.innerWidth > 768 && sidebar.classList.contains("active")) {
+            toggleSidebar(); // This will remove 'active' class and show the sidebar
+          }
+        });
+      });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
