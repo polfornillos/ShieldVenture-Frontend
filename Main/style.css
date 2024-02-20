@@ -103,6 +103,23 @@ body {
   gap: 15px;
 }
 
+/* Traveler Cart Sidebar */
+.traveler-cart {
+  position: fixed;
+  top: 0;
+  right: -280px; /* Hide the sidebar initially */
+  width: var(--sidebar-width);
+  height: 100%;
+  background: #fff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s;
+  z-index: 1000;
+}
+
+.traveler-cart.active {
+  right: 0; /* Show the sidebar when active */
+}
+
 /* Main Content */
 #content {
   margin-left: var(--sidebar-width);
