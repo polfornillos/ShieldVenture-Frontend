@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Responsive Sidebar Layout</title>
+    <title>ShieldVenture</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
@@ -91,8 +91,30 @@
     </div>
 
     <!-- Traveler Cart Sidebar -->
-    <div id="travelerCart" class="traveler-cart">
-      <!-- Add the content of your sidebar here -->
+    <div id="travelerCart" class="traveler-cart d-flex flex-column">
+      <div class="traveler-cart-logo mt-3 text-center"><i class="fa-solid fa-basket-shopping mr-2"></i>Traveler Cart</div>
+      <div class="traveler-cart-item">
+        <div class="traveler-cart-item-header">
+          <img src="https://via.placeholder.com/50" alt="Hotel" />
+          <div class="hotel-name">
+            <h6 class="mb-0">La Carmela de Boracay</h6>
+            <small>Travel Agency Name</small>
+          </div>
+          <div class="delete-cart-item-btn"><i class="fas fa-trash-can ml-2 text-danger"></i></div>
+        </div>
+        <div class="traveler-cart-item-body d-flex">
+          <img src="https://via.placeholder.com/50" alt="Room" />
+          <div class="traveler-cart-item-body-details ml-2">
+            <p><i class="fas fa-bed"></i> 1x Standard Room</p>
+            <p><i class="fas fa-calendar-alt"></i> July 01 - 03, 2023</p>
+            <p><i class="fas fa-user-friends"></i> 2 Adults, 2 Children, 1 infant</p>
+          </div>
+        </div>
+        <div class="traveler-cart-item-footer">
+          <a href="#" class="details-link">See Details</a>
+          <span class="price-tag">Php 8,000</span>
+        </div>
+      </div>
     </div>
 
     <script src="script.js"></script>

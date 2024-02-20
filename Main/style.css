@@ -106,9 +106,9 @@ body {
 /* Traveler Cart Sidebar */
 .traveler-cart {
   position: fixed;
-  top: 0;
-  right: -280px; /* Hide the sidebar initially */
-  width: var(--sidebar-width);
+  top: 57px;
+  right: -320px; /* Hide the sidebar initially */
+  width: 320px;
   height: 100%;
   background: #fff;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
@@ -120,6 +120,97 @@ body {
   right: 0; /* Show the sidebar when active */
 }
 
+.traveler-cart-logo {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.traveler-cart-item {
+  font-family: Arial, sans-serif;
+  max-width: 340px;
+  margin: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.traveler-cart-item-header {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f0f0f0;
+}
+
+.traveler-cart-item-header h6 {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.traveler-cart-item-header small {
+  font-size: 13px;
+}
+
+.traveler-cart-item-header img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.hotel-name {
+  flex-grow: 1;
+}
+
+.traveler-cart-item-body {
+  padding: 15px;
+  background-color: #ffffff;
+  font-size: 13px;
+}
+
+.delete-cart-item-btn i {
+  cursor: pointer;
+}
+
+.traveler-cart-item-body-details i {
+  color: var(--primary-color);
+}
+
+.traveler-cart-item-body p {
+  margin-bottom: 0;
+}
+
+.traveler-cart-item-body img {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.traveler-cart-item-footer {
+  padding: 20px;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price-tag {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 15px;
+}
+
+.details-link {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 15px;
+}
+
 /* Main Content */
 #content {
   margin-left: var(--sidebar-width);
@@ -129,6 +220,7 @@ body {
 
 /* Media queries */
 @media (min-width: 769px) {
+  /* Navbar content */
   .navbar-toggler {
     display: none;
   }
@@ -139,11 +231,12 @@ body {
 }
 
 @media (max-width: 768px) {
-  .sidebar-items {
-    margin-top: 80px;
-    gap: 10px;
+  /* Traveller cart content */
+  .traveler-cart {
+    top: 73px;
   }
 
+  /* Navbar content */
   .navbar-toggler {
     display: block; /* Show burger menu */
   }
@@ -151,6 +244,12 @@ body {
   .navbar {
     width: 100%;
     margin-left: 0;
+  }
+
+  /* Sidebar content */
+  .sidebar-items {
+    margin-top: 80px;
+    gap: 10px;
   }
 
   #sidebar {
