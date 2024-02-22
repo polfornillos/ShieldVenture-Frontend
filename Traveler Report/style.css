@@ -6,12 +6,6 @@
   --primary-darken: #2360bd;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box; /* Ensures padding does not affect overall width */
-}
-
 body,
 html {
   font-family: "Poppins", sans-serif;
