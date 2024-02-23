@@ -24,6 +24,17 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+//Function for traveler cart
+document.addEventListener("DOMContentLoaded", function () {
+  var travelerCartBtn = document.getElementById("travelerCartBtn");
+  var travelerCart = document.getElementById("travelerCart");
+
+  travelerCartBtn.addEventListener("click", function () {
+    travelerCart.classList.toggle("active");
+  });
+});
+
+
 
 // calendar function
 const daysContainer = document.querySelector(".days"),
