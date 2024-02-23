@@ -302,3 +302,13 @@ body {
     width: 100%;
   }
 }
+
+@media (max-width: 1064px) {
+  .bookings-container-header {
+    flex-direction: column;
+  }
+
+  .bookings-container-header .form-outline {
+    margin: 0 !important;
+  }
+}

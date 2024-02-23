@@ -186,14 +186,6 @@
 }
 
 @media (max-width: 960px) {
-  .bookings-container-header {
-    flex-direction: column;
-  }
-
-  .bookings-container-header .form-outline {
-    margin: 0 !important;
-  }
-
   .form-outline #dateRangePicker {
     margin-top: 10px;
     width: 100%;
