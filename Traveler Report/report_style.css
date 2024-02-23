@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --sidebar-width: 280px;
+  --primary-color: #2d6ecf;
+  --primary-darken: #2360bd;
+}
+
+/* Library styles */
+#dateRangePicker {
+  border-radius: 20px;
+  width: 300px;
+}
+
+.line-chart-container {
+  width: 90%;
+  height: auto;
+}
+
+.miles-consumed-header {
+  color: var(--primary-color);
+}
+/* Report card section */
+.report-card {
+  border-radius: 5px;
+  padding: 20px;
+  min-height: 607px;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+}
+
+.report-card h4 {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+/* Booking card */
+.bookings-container-body {
+  padding: 10px;
+  overflow-y: auto;
+  height: 530px;
+}
+
+.bookings-card {
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+}
+
+.booking-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Traveled places card */
+
+.traveled-container-body {
+  padding: 0 10px 10px 10px;
+  overflow-y: auto;
+  height: 548px;
+}
+
+.traveled-card {
+  min-height: 90px;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 15px;
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+.traveled-card .dark-overlay {
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.traveled-title {
+  z-index: 200;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* Activities card */
+.activities-container-body {
+  padding: 10px;
+  overflow-y: auto;
+  height: 530px;
+}
+
+.activities-card {
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: var(--primary-color);
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+}
+
+.activities-title {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* Hotels card */
+.hotels-container-body {
+  padding: 10px;
+  overflow-y: auto;
+  height: 530px;
+}
+
+.hotels-card {
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: var(--primary-color);
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+}
+
+.hotels-title {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* Custom scrollbars */
+.hotels-container-body::-webkit-scrollbar,
+.activities-container-body::-webkit-scrollbar,
+.bookings-container-body::-webkit-scrollbar,
+.traveled-container-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.hotels-container-body::-webkit-scrollbar-track,
+.activities-container-body::-webkit-scrollbar-track,
+.bookings-container-body::-webkit-scrollbar-track,
+.traveled-container-body::-webkit-scrollbar-track {
+  border-radius: 20px;
+  background-color: #e2e2e2;
+}
+
+.hotels-container-body::-webkit-scrollbar-thumb,
+.activities-container-body::-webkit-scrollbar-thumb,
+.bookings-container-body::-webkit-scrollbar-thumb,
+.traveled-container-body::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 20px;
+}
+
+@media (max-width: 767px) {
+  .miles-consumed-container {
+    margin-top: 50px;
+  }
+
+  .report-section {
+    margin: 0 20px;
+  }
+
+  .report-card {
+    min-height: 200px;
+  }
+
+  .bookings-container-body,
+  .traveled-container-body {
+    height: auto;
+  }
+
+  .traveled-card {
+    min-height: auto;
+  }
+
+  .bookings-and-traveled-container,
+  .activities-and-hotels-container {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 960px) {
+  .bookings-container-header {
+    flex-direction: column;
+  }
+
+  .bookings-container-header .form-outline {
+    margin: 0 !important;
+  }
+
+  .form-outline #dateRangePicker {
+    margin-top: 10px;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 425px) {
+  .report-section {
+    margin: 20px !important;
+  }
+  .hotels-title,
+  .booking-title,
+  .activities-title,
+  .booking-agency {
+    font-size: 15px;
+  }
+
+  .bookings-container,
+  .hotels-container,
+  .activities-container,
+  .traveled-container {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 320px) {
+  .booking-agency {
+    display: none;
+  }
+}
