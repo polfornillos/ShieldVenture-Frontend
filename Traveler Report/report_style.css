@@ -157,6 +157,24 @@
   border-radius: 20px;
 }
 
+@media (max-width: 1064px) {
+  .bookings-container-header {
+    flex-direction: column;
+  }
+
+  .bookings-container-header .form-outline {
+    margin: 0 !important;
+  }
+}
+
+@media (max-width: 960px) {
+  .form-outline #dateRangePicker {
+    margin-top: 10px;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
 @media (max-width: 767px) {
   .miles-consumed-container {
     margin-top: 50px;
@@ -182,14 +200,6 @@
   .bookings-and-traveled-container,
   .activities-and-hotels-container {
     gap: 20px;
-  }
-}
-
-@media (max-width: 960px) {
-  .form-outline #dateRangePicker {
-    margin-top: 10px;
-    width: 100%;
-    max-width: 100%;
   }
 }
 
