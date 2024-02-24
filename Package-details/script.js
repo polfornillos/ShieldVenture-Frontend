@@ -35,8 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-
-// calendar function
+//#region calendar function
 const daysContainer = document.querySelector(".days"),
   nextBtn = document.querySelector(".next-btn"),
   prevBtn = document.querySelector(".prev-btn"),
@@ -64,8 +63,17 @@ const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 const date = new Date();
 
 // get current month
-let currentMonth = date.getMonth();
+let currentMonth = date.getMonth(); //default get the current month
 
+//preferred month
+let customMonth = 0;//change month of booking 0=january to 11=december 
+
+if(currentMonth != customMonth){//change the month from default to custom 
+  currentMonth = customMonth;
+}
+else{
+  currentMonth = date.getMonth(); 
+}
 // get current year
 let currentYear = date.getFullYear();
 
@@ -92,19 +100,33 @@ function renderCalendar() {
     days += `<div class="day prev">${prevLastDayDate - x + 1}</div>`;
   }
 
-  // current month days
+  let bookingDays = [15,16,17] //put days to book here
+  let unavailableDays = [11,24,25,30,31,21]//put unavailable days/fullybooked days to here
+  let bookedDaysCount = 0;
+  let fullyBookedCount = 0;
   for (let i = 1; i <= lastDayDate; i++) {
     // check if its today then add today class
     if (
-      i === new Date().getDate() &&
-      currentMonth === new Date().getMonth() &&
+      i === bookingDays[bookedDaysCount] &&
+      currentMonth === customMonth &&
       currentYear === new Date().getFullYear()
     ) {
+      bookedDaysCount+=1;//to iterate thru index of bookingDays[]
       // if date month year matches add today
       days += `<div class="day today">${i}</div>`;
-    } else {
-      //else dont add today
-      days += `<div class="day ">${i}</div>`;
+    }
+    else {
+      //else dont add booked day
+      if( 
+        i === unavailableDays[fullyBookedCount] &&
+        currentMonth === customMonth &&
+        currentYear === new Date().getFullYear()){
+        days += `<div class="day unavailable-days">${i}</div>`;
+        fullyBookedCount+=1;//to iterate thru index of unavailableDays[]
+      }
+      else{
+        days += `<div class="day ">${i}</div>`;
+      }
     }
   }
 
@@ -165,8 +187,8 @@ function hideTodayBtn() {
     todayBtn.style.display = "flex";
   }
 }
-// calendar function end
-//tour option button
+//#endregion calendar function end
+//#region tour option button
 function openTourOption(){
   var x = document.getElementById("tour-options-dropdown");
   if (x.style.display === "none") {
@@ -183,4 +205,4 @@ function openHotelOption(){
     x.style.display = "none";
   }
 }
-//tour option button end
+//#endregion tour option button end
