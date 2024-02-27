@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShieldVenture</title>
+
+    <!-- Font Awesome -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="report_style.css" />
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <nav id="sidebar">
+      <div class="d-flex justify-content-center">
+        <img src="images/Logo W.png" class="sidebar-logo" />
+      </div>
+
+      <ul class="sidebar-items list-unstyled px-3 d-flex flex-column">
+        <li>
+          <a href="#">
+            <i class="fas fa-comment"></i>
+            Chat
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fas fa-chart-simple"></i>
+            Traveler Report
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fas fa-users"></i>
+            Community
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fas fa-bookmark"></i>
+            Generated Package
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fas fa-box-open"></i>
+            Package List
+          </a>
+        </li>
+        <li class="mt-5">
+          <a href="#">
+            <i class="fas fa-sign-out-alt"></i>
+            Sign Out
+          </a>
+        </li>
+      </ul>
+      <div class="bottom-sidebar">
+        <div class="profile-info d-flex">
+          <img src="images/profile-picture.jpg" alt="Profile Picture" class="rounded-circle" style="width: 50px; height: 50px" />
+          <div class="user-info ml-2">
+            <p class="username mb-0">John Doe</p>
+            <p class="email mb-0">john@example.com</p>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div id="content">
+      <!-- Nav bar -->
+      <nav class="navbar navbar-expand-lg py-3">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" id="sidebarCollapse">
+            <span class="navbar-toggler-icon d-flex align-items-center justify-content-center">
+              <i class="fas fa-bars"></i>
+            </span>
+          </button>
+          <div class="navbar-icons ml-auto d-flex mr-3">
+            <a href="#" class="mx-2" id="travelerCartBtn"><i class="fas fa-shopping-cart fa-lg"></i></a>
+            <a href="#" class="mx-2"><i class="fas fa-bell fa-lg"></i></a>
+            <a href="#" class="mx-2"><i class="fas fa-cog fa-lg"></i></a>
+          </div>
+        </div>
+      </nav>
+      <!-- Nav bar ends here -->
+
+      <!-- Main Content -->
+      <div class="container-fluid p-3"></div>
+    </div>
+
+    <!-- Traveler Cart Sidebar -->
+    <div id="travelerCart" class="traveler-cart d-flex flex-column">
+      <div class="traveler-cart-logo mt-3 text-center"><i class="fa-solid fa-basket-shopping mr-2"></i>Traveler Cart</div>
+      <div class="traveler-cart-items-container">
+        <div class="traveler-cart-item">
+          <div class="traveler-cart-item-header">
+            <img src="https://via.placeholder.com/50" alt="Hotel" />
+            <div class="hotel-name">
+              <h6 class="mb-0">La Carmela de Boracay</h6>
+              <small>Travel Agency Name</small>
+            </div>
+            <div class="delete-cart-item-btn"><i class="fas fa-trash-can ml-2 text-danger"></i></div>
+          </div>
+          <div class="traveler-cart-item-body d-flex">
+            <img src="https://via.placeholder.com/84" alt="Room" />
+            <div class="traveler-cart-item-body-details ml-2">
+              <p><i class="fas fa-bed"></i> 1x Standard Room</p>
+              <p><i class="fas fa-calendar-alt"></i> July 01 - 03, 2023</p>
+              <p><i class="fas fa-user-friends"></i> 2 Adults, 2 Children, 1 infant</p>
+            </div>
+          </div>
+          <div class="traveler-cart-item-footer">
+            <a href="#" class="details-link">See Details</a>
+            <span class="price-tag">Php 8,000</span>
+          </div>
+        </div>
+        <div class="traveler-cart-item">
+          <div class="traveler-cart-item-header">
+            <img src="https://via.placeholder.com/50" alt="Hotel" />
+            <div class="hotel-name">
+              <h6 class="mb-0">La Carmela de Boracay</h6>
+              <small>Travel Agency Name</small>
+            </div>
+            <div class="delete-cart-item-btn"><i class="fas fa-trash-can ml-2 text-danger"></i></div>
+          </div>
+          <div class="traveler-cart-item-body d-flex">
+            <img src="https://via.placeholder.com/84" alt="Room" />
+            <div class="traveler-cart-item-body-details ml-2">
+              <p><i class="fas fa-bed"></i> 1x Standard Room</p>
+              <p><i class="fas fa-calendar-alt"></i> July 01 - 03, 2023</p>
+              <p><i class="fas fa-user-friends"></i> 2 Adults, 2 Children, 1 infant</p>
+            </div>
+          </div>
+          <div class="traveler-cart-item-footer">
+            <a href="#" class="details-link">See Details</a>
+            <span class="price-tag">Php 8,000</span>
+          </div>
+        </div>
+        <div class="traveler-cart-item">
+          <div class="traveler-cart-item-header">
+            <img src="https://via.placeholder.com/50" alt="Hotel" />
+            <div class="hotel-name">
+              <h6 class="mb-0">La Carmela de Boracay</h6>
+              <small>Travel Agency Name</small>
+            </div>
+            <div class="delete-cart-item-btn"><i class="fas fa-trash-can ml-2 text-danger"></i></div>
+          </div>
+          <div class="traveler-cart-item-body d-flex">
+            <img src="https://via.placeholder.com/84" alt="Room" />
+            <div class="traveler-cart-item-body-details ml-2">
+              <p><i class="fas fa-bed"></i> 1x Standard Room</p>
+              <p><i class="fas fa-calendar-alt"></i> July 01 - 03, 2023</p>
+              <p><i class="fas fa-user-friends"></i> 2 Adults, 2 Children, 1 infant</p>
+            </div>
+          </div>
+          <div class="traveler-cart-item-footer">
+            <a href="#" class="details-link">See Details</a>
+            <span class="price-tag">Php 8,000</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="checkout-btn text-center d-flex justify-content-center">
+        <button>Checkout</button>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap Bundle with Popper.js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Date Range Picker Bundle -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+    <!-- Custom Script in the bottom to work -->
+    <script src="script.js"></script>
+  </body>
+</html>

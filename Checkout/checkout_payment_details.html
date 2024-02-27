@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking Summary</title>
+
+    <!-- Font Awesome -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="checkout_payment_details.css" />
+    <link rel="stylesheet" href="checkout_traveler_details.css" />
+  </head>
+  <body>
+    <div class="checkout-container d-flex justify-content-center w-100 p-5 flex-wrap" style="gap: 30px">
+      <div class="booking-details-container col-xl-8 col-md-12 d-flex flex-column" style="gap: 10px">
+        <div class="booking-status-container px-4 py-4">
+          <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+          </div>
+          <div class="step active">Traveler Details</div>
+          <div class="step active">Payment Details</div>
+          <div class="step">Checkout</div>
+          <div class="clear"></div>
+        </div>
+        <div class="payment-information-container p-3">
+          <div class="payment-method-info-container">
+            <h3>Select a payment method</h3>
+            <div class="row mt-5">
+              <div class="payment-method-btn-container col d-flex" style="gap: 10px">
+                <button class="credit-card-btn rounded p-4"><i class="fa-solid fa-credit-card pr-2"></i>Credit Card</button>
+                <button class="paypal-btn rounded p-4"><i class="fa-brands fa-paypal pr-2"></i>Paypal</button>
+              </div>
+            </div>
+            <div class="card-detail-row row mt-5">
+              <div class="col">
+                <div class="form-group">
+                  <label for="">Name on Card</label>
+                  <input type="text" class="form-control" id="traveler_fname" />
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="form-group">
+                  <label for="">Card Number</label>
+                  <input type="text" class="form-control" id="traveler_mname" />
+                </div>
+              </div>
+            </div>
+            <div class="card-detail-row row mt-3">
+              <div class="col">
+                <div class="form-group">
+                  <label for="">Expiration Date</label>
+                  <div class="d-flex flex-row" style="gap: 20px">
+                    <select class="form-control" id="expiration_month">
+                      <option value="" hidden>Month</option>
+                      <option value="01">01</option>
+                      <option value="02">02</option>
+                      <option value="03">03</option>
+                      <option value="04">04</option>
+                      <option value="05">05</option>
+                      <option value="06">06</option>
+                      <option value="07">07</option>
+                      <option value="08">08</option>
+                      <option value="09">09</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                    </select>
+
+                    <select class="form-control" id="expiration_year">
+                      <option value="" hidden>Year</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="form-group">
+                  <label for="">CVC</label>
+                  <input type="text" class="form-control" id="traveler_mname" />
+                </div>
+              </div>
+            </div>
+            <div class="row mt-5">
+              <div class="form-group d-flex justify-content-end">
+                <button class="pay-now-btn p-3 rounded"><i class="fa-solid fa-wallet mr-3"></i>Pay now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="booking-summary-container col-xl-3 col-md-12">
+        <div class="d-flex flex-column h-100" style="gap: 20px">
+          <div class="booking-summary-section rounded p-4">
+            <h3 class="mb-3">Bookings Summary</h3>
+            <div class="booking-summary-information rounded">
+              <div class="booking-header-container rounded"><img class="rounded-top" src="images/vacation.jpg" /></div>
+              <div class="booking-body-container p-3">
+                <p class="mb-0" style="font-weight: 600">3D2N Discover Boracay's Beauty</p>
+                <p class="mb-4">Dreamspree Travel & Tours</p>
+                <div class="booking-info-details d-flex flex-column">
+                  <div class="check-in-container d-flex justify-content-between">
+                    <p class="summary-detail-title">Check-In</p>
+                    <p>January 20</p>
+                  </div>
+                  <div class="check-out-container d-flex justify-content-between">
+                    <p class="summary-detail-title">Check-Out</p>
+                    <p>January 25</p>
+                  </div>
+                  <div class="guest-count-container d-flex justify-content-between">
+                    <p class="summary-detail-title">Guests</p>
+                    <p>4</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h3 class="mt-5 mb-3">Pricing Breakdown</h3>
+            <div class="pricing-breakdown-container rounded p-3">
+              <div class="base-fare-container d-flex justify-content-between">
+                <p class="summary-detail-title">Base Fare x 4</p>
+                <p>4500 x 4</p>
+              </div>
+              <div class="variant-container d-flex justify-content-between">
+                <p class="summary-detail-title">Variant</p>
+                <p>4000</p>
+              </div>
+              <div class="tour-options-container d-flex justify-content-between">
+                <p class="summary-detail-title">Tour options</p>
+                <p>2000</p>
+              </div>
+              <div class="total-container d-flex justify-content-between mt-5">
+                <p style="font-weight: 600">Total</p>
+                <p>2000</p>
+              </div>
+            </div>
+          </div>
+          <div class="buttons-section mt-auto rounded d-flex flex-column" style="gap: 20px">
+            <button class="go-back-btn p-3 rounded">Go back home</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap Bundle with Popper.js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Date Range Picker Bundle -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+  </body>
+  <script>
+    // For example, setting it to 33% for the first step
+    document.getElementById("myBar").style.width = "50.3333%";
+
+    window.onload = function () {
+      var year = new Date().getFullYear();
+      var endYear = year + 20; // Set end year (+20 years)
+      var options = "";
+
+      for (var y = year; y <= endYear; y++) {
+        options += "<option>" + y + "</option>";
+      }
+      document.getElementById("expiration_year").innerHTML += options;
+    };
+  </script>
+</html>
