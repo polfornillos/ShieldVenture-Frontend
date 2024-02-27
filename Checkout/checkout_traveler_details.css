@@ -196,10 +196,18 @@
     padding: 40px !important;
   }
 }
-
-@media (max-width: 425px) {
+@media (max-width: 768px) {
+  .booking-summary-container {
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
   .checkout-container {
     padding: 15px !important;
+  }
+
+  .booking-details-container {
+    width: 100%;
   }
   .booking-summary-section {
     width: 100%;
