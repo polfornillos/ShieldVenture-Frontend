@@ -1,3 +1,4 @@
 2/24/24 - sidebar fix removed flex in body tag 
             - added height: 100% (media query max768 #sidebar)
         - main body added overflow-x: hidden; (media query max768 #sidebar)
+2/26/24 - added media queries min-1441,min-1025,min-769,max-1440,max-768,max-425

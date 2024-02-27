@@ -84,7 +84,7 @@
       <!-- Nav bar ends here -->
 
       <!-- Main Content -->
-      <div class="container-fluid p-3" id="main-content-container">
+      <div class="container-fluid p-3 row" id="main-content-container">
         <!--#region Gallery slider Content -->
           <div id="carouselExampleIndicators" class="carousel slide d-flex w-100 gallery-contain" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -117,7 +117,7 @@
         <!--#region Package info section -->
         <div class="d-flex" id="package-info-container">
           <div class="row">
-            <div class="col d-flex flex-column">
+            <div class="col d-flex flex-column mb-5">
               <span class="custom-h1">3D2N Discover Boracay's Beauty</span>
               <span class="custom-h2">PHP 14,500.00/PAX min.  5 PAX</span>
               <div class="package-info-travelpartner d-flex align-items-center justify-content-center">
@@ -162,186 +162,116 @@
           </div>
         </div>
         <!--#endregion Calendar section end -->
-        <!--#region Itenerary section -->
-        <div class="d-flex flex-row flex-wrap" id="itinerary-container">
+        <!--#region Itinerary section -->
+        <div class="d-flex flex-wrap" id="itinerary-container">
           <div class="col" id="itinerary-container-left">
-            <div class="row">
-              <span class="custom-h1">ITINERARY</span>
-              <!-- package days for loop here -->
-              <div class="row d-flex">
-                <span class="custom-h2">DAY 1</span>
-                <div class="container border border-dark rounded pl-4 pb-5 pt-5" id="itinerary-package-container">
-                  <!-- package info for loop here -->
-                  <span><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
-                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-                  </svg></span>
-                  <span class="ml-3 custom-h3">09:00 AM - Arrival at Airport</span>
+              <span class="custom-h1"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" style="transform: rotate(90deg);" fill="currentColor" class="bi bi-airplane-fill mr-4" viewBox="0 0 20 20">
+                <path d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849"/>
+              </svg>ITINERARY</span>
+              <!--#region package days for loop here -->
+              <div class="row mt-3">
+                <span class="custom-h2" style="font-weight: 600; color: var(--primary-color);">DAY 01</span>
+                <div class="d-flex row" id="itinerary-package-container">
+                  <!--#region package info for loop here -->
+                  <div class="m-0 p-0 d-flex align-items-center" style="gap: 5px;">
+                    <span><svg xmlns="http://www.w3.org/2000/svg" width="calc(.5rem + 2vw)" height="calc(1rem + 3vh)" fill="var(--primary-color)" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                      <circle cx="8" cy="8" r="8"/>
+                    </svg></span> <!--circle icon-->
+                    <span class="custom-h3" id="package-info-time-title">09:00 AM - Arrival at Airport</span>
+                  </div>
                   <div class="dotted-itinerary-div">
-                    <div class="container border border-dark rounded" id="package-info">
+                    <div class="border" id="package-info">
                       <div class="row">
-                        <div class="col d-flex align-items-center">
-                          <img class="d-block" width="150vh" height="130vh" src="gallery2.jpeg">
-                          <div class="row ml-1">
-                            <span class="custom-h2"> Airport Name </span>
-                            <span class="h4"> Airport Arrival </span>
+                        <div class="d-flex align-items-center pr-3">
+                          <img class="d-block itinerary-image" src="gallery2.jpeg">
+                          <div class="row w-100" style="margin-left: 1px; margin-right: 1px;">
+                            <span class="custom-h2"> Sheikh Sultan Bin Khalifa bin Zayed Al Nahyan palace Complex </span>
+                            <span class="custom-h4"> Airport Arrival </span>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <!-- package info for loop end here -->
+                  <!--#endregion package info for loop end here -->
                 </div>
               </div>
-              <!-- package days for loop here -->
-            </div>
+              <!--#endregion package days for loop here -->
           </div>
-          <div class="col" id="itinerary-container-right">
-            <div class="row">
-              <div class="d-flex" id="package-inclusions-div">
-                <div class="row">
-                  <div class="col d-flex flex-column" id="package-inclusions-dropdown">                 
-                    <div class="container p-3">
-                      <span class="custom-h1"><i class="drop-arrow-down mr-5"></i>INCLUSIONS</span>
-                    </div>
-                    <div class="inclusions-content">
-                      <!--loop here-->
-                      <li class="custom-h2">Island Hopping Adventure</li>
-                      <li class="custom-h2">Snorkeling and Swimming in Crystal Clear Waters</li>
-                      <!--loop here-->
-                    </div>
-                  </div>
-                </div>
+          
+          
+          <div class="d-flex flex-column" id="itinerary-container-right">
+            <!--#region inclusions tab-->
+            <div class="d-flex" id="package-inclusions-div">               
+              <div class="d-flex justify-content-start align-items-center" id="package-inclusions-dropdown">                 
+                <span class="custom-h1">Inclusions</span>
               </div>
-              <div class="d-flex" id="package-exclusions-div">
-                <div class="row">
-                  <div class="col d-flex flex-column" id="package-exclusions-dropdown">
-                    <div class="container p-3">
-                      <span class="custom-h1"><i class="drop-arrow-down mr-5"></i>EXCLUSIONS</span>
-                    </div>
-                    <div class="exclusions-content">
-                      <!--loop here-->
-                      <li class="custom-h2">Airfare</li>
-                      <!--loop here-->
-                    </div>
-                  </div>
-                </div>
+              <div class="inclusions-content">
+                <!--loop here-->
+                <span class="custom-h2">Island Hopping Adventure</span>
+                <span class="custom-h2">Snorkeling and Swimming in Crystal Clear Waters</span>
+                <!--loop here-->
+              </div>  
+            </div>
+            <!--#endregion inclusions tab-->
+
+            <!--#region exclusions tab-->
+            <div class="d-flex" id="package-exclusions-div">               
+              <div class="d-flex justify-content-start align-items-center" id="package-exclusions-dropdown">                 
+                <span class="custom-h1">Exclusions</span>
               </div>
-              <div class="d-flex mt-5" id="package-tour-options-div">
-                <div class="row">
-                  <button onclick="openTourOption()" class="btn btn-primary shadow p-3" id="tour-options-button"><span class="custom-h1">
-                    <i class="drop-arrow-down ml-3 mr-3 mb-2" style="filter: invert();"></i>TOUR OPTIONS</span></button>
-                  <div class="row d-flex">
-                    <div class="container border border-dark rounded pl-4 pt-5 pr-4" id="tour-options-dropdown">                    
-                      <div class="row d-flex">
-                        <!-- activities for loop here -->
-                        <div class="container border border-dark rounded" >
-                          <!-- activities info for loop here -->
-                            <div class="col d-flex align-items-center">
-                              <img class="d-block" width="500" height="150" src="gallery2.jpeg">
-                              <div class="row ml-1" style="width: 100%;">
-                                <span class="custom-h2"> Parasailing </span>
-                                <span class="h5"> Activity </span>
-                                <span class="h5"> No added person</span>
-                              </div>
-                              <button type="button" class="btn btn-danger ml-5 p-4"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
-                                <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
-                                <path d="M14.5 3a1 1 0 0 1-1 1custom-h13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1custom-h2a1 1 0 0 1 1 1custom-h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3custom-h11V2h-11z"/>
-                              </svg></button><!-- delete button -->
-                            </div>
-                          <!-- activities info for loop end here -->
+              <div class="exclusions-content">
+                <!--loop here-->
+                <span class="custom-h2">Airfare</span>
+                <!--loop here-->
+              </div>  
+            </div>
+            <!--#endregion exclusions tab-->
+
+            <!--#region Tour options-->
+            <div class="d-flex" id="package-tour-options-div">               
+              <div class="d-flex justify-content-start align-items-center" id="package-tour-options-dropdown">                 
+                <span class="custom-h1">Tour options</span>
+              </div>
+              <div class="tour-options-content">
+                <div class="row d-flex justify-content-center">
+                  <!-- tour options for loop here -->
+                  <div class="border" id="tour-option-info">
+                    <div class="col d-flex align-items-center">
+                      <div class="d-flex align-items-center w-100">
+                        <img class="d-block itinerary-image" src="vacation.jpg">
+                        <div class="d-flex col align-items-center justify-content-center">
+                          <div class="row ml-2 mr-2">
+                            <span class="custom-h2"> Parasailing </span>
+                            <span class="custom-h4"> Activity </span>
+                            <span class="custom-h4"> No Added person </span>
+                          </div>
+                          <div>
+                            <button type="button" class="btn btn-danger"  id="tour-option-del-btn"><svg xmlns="http://www.w3.org/2000/svg" width="5vw" height="5vh" fill="currentColor" class="bi bi-trash tour-del-btn-icon" viewBox="0 0 16 16">
+                              <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
+                              <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
+                            </svg></button><!-- delete button -->
+                          </div>
                         </div>
-                        <!-- activities for loop end here -->
                       </div>
-                      <button type="button" class="btn btn-outline-primary mt-3 mb-3 w-100" style="border: 3px dashed;"><span class="custom-h2">ADD TOUR OPTIONS</span>
-                      <span style="border:1px solid;border-radius: 3px; font-size: 50px; padding: 0px 10px; background-color: rgb(170, 195, 221); margin-left: 15px;">+</span></button>
                     </div>
                   </div>
+                  <!-- tour options for loop end here -->
                 </div>
-              </div>
-              <div class="row mt-5" id="package-hotel-options-div">
-                <div class="row">
-                  <button onclick="openHotelOption()" class="btn btn-primary shadow p-3" id="hotel-options-button"><span class="custom-h1">
-                    <i class="drop-arrow-down ml-3 mr-3 mb-2" style="filter: invert();"></i>HOTEL OPTIONS</span></button>
-                  <div class="row d-flex">
-                    <div class="container border border-dark rounded pl-4 pt-5 pr-4" id="hotel-options-dropdown">                    
-                      <div class="row d-flex">
-                        <!-- hotel options for loop here -->
-                        <div class="container border border-dark rounded">
-                            <div class="col d-flex align-items-center">
-                              <img class="d-block" width="500" height="150" src="gallery2.jpeg">
-                              <div class="row ml-3" style="width: 100%;">
-                                <!-- hotel info for loop here -->
-                                <span class="custom-h2"> 1 DOUBLE BEDROOM </span>
-                                <ul class="ml-3">
-                                  <li class="h5"> Shangri-La Boracay </li>
-                                  <li class="h5"> w/ Breakfast, Lunch , and Dinner</li>
-                                  <li class="h5"> 2 Adults</li>
-                                  <li class="h5"> July 01-03,2023</li>
-                                </ul>
-                                <!-- hotel info for loop end here -->
-                              </div>
-                              <button type="button" class="btn btn-danger ml-5 p-4"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-                                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15custom-h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1custom-h2.5A1.5 1.5 0 0 0 1 2.5z"/>
-                              </svg></button><!-- edit button -->
-                            </div>
-                        </div>
-                        <!-- hotel options for loop end here -->
-                      </div>
-                      <button type="button" class="btn btn-outline-primary mt-3 mb-3 w-100" style="border: 3px dashed;"><span class="custom-h2">ADD HOTEL OPTIONS</span>
-                      <span style="border:1px solid;border-radius: 3px; font-size: 50px; padding: 0px 10px; background-color: rgb(170, 195, 221); margin-left: 15px;">+</span></button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                <button type="button" class="btn btn-outline-primary mt-3 mb-3 w-100" id="add-tour-options-btn"><span class="custom-h2">ADD TOUR OPTIONS</span>
+                <span style="margin-left: 15px; font-size: calc(1rem + 1vh);">+</span></button>
+              </div>  
             </div>
+            <!--#endregion Tour options end-->
           </div>
-        </div>
-        <!--#endregion Itenerary section end -->
-        <!--#region Review section -->
-        <div class="container" id="package-review-container">
-          <div class="row">
-            <div class="col d-flex flex-column">
-              <span class="custom-h1">Write a Review</span>
-              <form>
-                <div class="form-group">
-                  <textarea class="form-control" id="review-text-area" rows="5"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary mt-5 w-25"><span class="custom-h2">Post</span></button>
-              </form>
-            </div>
-          </div>
-        </div>
-        <!--#endregion Review section end-->
-        <!--#region Payment summary section -->
-        <div class="d-flex" id="payment-summary-container">
-          <div class="row">
-            <span class="custom-h1 mb-5 mt-3">PAYMENT SUMMARY</span>
-            <div class="d-flex flex-row">
-              <div class="col d-flex flex-column">
-                <span class="custom-h3">Extra Charge Total:</span>
-                <span class="custom-h3">Package Total Price:</span>
-                <span class="custom-h3">Subtotal: </span>
-                <span class="custom-h3 fw-bold">Total: </span>
-              </div>
-              <div class="col d-flex flex-column" id="payment-summary-prices">
-                <span class="custom-h3">PHP 8,000.00</span>
-                <span class="custom-h3">PHP 14,500.00</span>
-                <span class="custom-h3">PHP 22,500.00</span>
-                <span class="custom-h3 fw-bold">PHP 22,500.00 </span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--#endregion Payment summary section end-->
-        <!--#region form add to package cart-->
-        <div class="d-flex justify-content-center" id="add-package-form">
+          <!-- #endregion Itinerary section end-->
+
+        <!--#region form add to package cart end-->
+        <div class="d-flex justify-content-center w-100" id="add-package-form">
           <form>
             <button type="submit" style="text-align: center; padding: 20px 120px;" class="btn btn-primary mt-5"><span class="custom-h2">Add Package to cart</span></button>
           </form>
         </div>
         <!--#endregion form add to package cart end-->
-      
       </div>
     </div>
     <!--#region Traveler Cart Sidebar -->
