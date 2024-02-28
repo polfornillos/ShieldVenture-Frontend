@@ -19,7 +19,6 @@ html {
 }
 
 body {
-  display: flex;
   background-color: #f8f9fa;
   overflow-x: hidden; /* Prevents horizontal scroll */
 }

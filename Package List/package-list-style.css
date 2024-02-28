@@ -32,4 +32,5 @@
 .view-icon:hover {
   color: #ffffff;
   background-color: #003e9b;
+  cursor: pointer;
 }
