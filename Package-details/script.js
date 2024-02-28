@@ -188,21 +188,3 @@ function hideTodayBtn() {
   }
 }
 //#endregion calendar function end
-//#region tour option button
-function openTourOption(){
-  var x = document.getElementById("tour-options-dropdown");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
-function openHotelOption(){
-  var x = document.getElementById("hotel-options-dropdown");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
-//#endregion tour option button end
