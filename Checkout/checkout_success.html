@@ -13,8 +13,8 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="checkout_payment_details.css" />
     <link rel="stylesheet" href="checkout_traveler_details.css" />
+    <link rel="stylesheet" href="checkout_success.css" />
   </head>
   <body>
     <div class="checkout-container d-flex justify-content-center w-100 p-5 flex-wrap" style="gap: 30px">
@@ -25,73 +25,15 @@
           </div>
           <div class="step active">Traveler Details</div>
           <div class="step active">Payment Details</div>
-          <div class="step">Checkout</div>
+          <div class="step active">Checkout</div>
           <div class="clear"></div>
         </div>
-        <div class="payment-information-container p-3">
-          <div class="payment-method-info-container">
-            <h3>Select a payment method</h3>
-            <div class="row mt-5">
-              <div class="payment-method-btn-container col d-flex" style="gap: 10px">
-                <button class="credit-card-btn rounded p-4"><i class="fa-solid fa-credit-card pr-2"></i>Credit Card</button>
-                <button class="paypal-btn rounded p-4"><i class="fa-brands fa-paypal pr-2"></i>Paypal</button>
-              </div>
-            </div>
-            <div class="card-detail-row row mt-5">
-              <div class="col">
-                <div class="form-group">
-                  <label for="">Name on Card</label>
-                  <input type="text" class="form-control" id="traveler_fname" />
-                </div>
-              </div>
-
-              <div class="col">
-                <div class="form-group">
-                  <label for="">Card Number</label>
-                  <input type="text" class="form-control" id="traveler_mname" />
-                </div>
-              </div>
-            </div>
-            <div class="card-detail-row row mt-3">
-              <div class="col">
-                <div class="form-group">
-                  <label for="">Expiration Date</label>
-                  <div class="d-flex flex-row" style="gap: 20px">
-                    <select class="form-control" id="expiration_month">
-                      <option value="" hidden>Month</option>
-                      <option value="01">01</option>
-                      <option value="02">02</option>
-                      <option value="03">03</option>
-                      <option value="04">04</option>
-                      <option value="05">05</option>
-                      <option value="06">06</option>
-                      <option value="07">07</option>
-                      <option value="08">08</option>
-                      <option value="09">09</option>
-                      <option value="10">10</option>
-                      <option value="11">11</option>
-                      <option value="12">12</option>
-                    </select>
-
-                    <select class="form-control" id="expiration_year">
-                      <option value="" hidden>Year</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col">
-                <div class="form-group">
-                  <label for="">CVC</label>
-                  <input type="text" class="form-control" id="traveler_mname" />
-                </div>
-              </div>
-            </div>
-            <div class="row mt-5">
-              <div class="form-group d-flex justify-content-end">
-                <button class="pay-now-btn p-3 rounded"><i class="fa-solid fa-wallet mr-3"></i>Pay now</button>
-              </div>
-            </div>
+        <div class="success-information-container p-5 rounded">
+          <div class="success-method-info-container h-100 d-flex flex-column justify-content-center align-items-center">
+            <i class="fa-solid fa-circle-check" style="font-size: 200px;color:#2d6ecf;"></i>
+            <h3 class="mt-5">Your Payment is Successful!</h3>
+            <h5 style="font-weight: 300;">Thank you for booking with Shieldventure. We hope you have a safe trip!</h3>
+            <button class="go-back-btn p-3 mt-5 rounded" style="background-color: #2d6ecf;color: white;">Go back home</button>
           </div>
         </div>
       </div>
@@ -161,17 +103,7 @@
   </body>
   <script>
     // For example, setting it to 33% for the first step
-    document.getElementById("myBar").style.width = "70.3333%";
+    document.getElementById("myBar").style.width = "100.3333%";
 
-    window.onload = function () {
-      var year = new Date().getFullYear();
-      var endYear = year + 20; // Set end year (+20 years)
-      var options = "";
-
-      for (var y = year; y <= endYear; y++) {
-        options += "<option>" + y + "</option>";
-      }
-      document.getElementById("expiration_year").innerHTML += options;
-    };
   </script>
 </html>
