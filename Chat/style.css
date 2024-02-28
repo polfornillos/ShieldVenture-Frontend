@@ -272,7 +272,7 @@ body {
   .card-text{
     font-size: calc(8px + .5vh);
     font-weight: 400;
-    max-height: 80px; 
+    max-height: 95px; 
   }
   .card-body {
     width: 30vw;
