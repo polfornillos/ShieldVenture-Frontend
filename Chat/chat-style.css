@@ -1,55 +1,70 @@
-.travel-chat{
-    background-color: #2D6ECF;
-    border-radius: 10px;
-    color: #ffffff;
-    width: 55%;
+.travel-chat {
+  background-color: #2d6ecf;
+  border-radius: 10px;
+  color: #ffffff;
+  width: 55%;
+}
+
+.user-chat {
+  background-color: #003e9b;
+  border-radius: 10px;
+  color: #ffffff;
+  width: 55%;
+}
+
+.message-form {
+  padding: 10px;
+  background-color: #f8f9fa;
+}
+
+.message-input {
+  flex: 1;
+  border-radius: 10px;
+  border-right: none;
+  border-color: #ababab;
+}
+
+.btn-send {
+  border-radius: 0px 10px 10px 0;
+  border-color: #ababab;
+  border-left: none;
+  color: #2d6ecf;
+  background-color: #ffffff;
+}
+
+.chat-messages {
+  height: 70vh;
+  overflow-y: auto;
+}
+
+.chat-messages::-webkit-scrollbar {
+  width: 0.3em;
+}
+
+/* Targets the track (the background part) of the scrollbar */
+.chat-messages::-webkit-scrollbar-track {
+  margin-top: 10px; /* Adds a top margin to the scrollbar track for spacing */
+  margin-bottom: 10px; /* Adds a bottom margin to the scrollbar track for spacing */
+}
+
+/* Targets the thumb (the part of the scrollbar that indicates the scrolling position and can be dragged) */
+.chat-messages::-webkit-scrollbar-thumb {
+  background-color: #141414;
+  border-radius: 1rem; /* Rounds the corners of the scrollbar thumb to 1 rem for a pill-like shape */
+}
+
+@media (max-width: 768px) {
+  .chat-messages {
+    font-size: 15px;
   }
-  
-  .user-chat{
-    background-color: #003E9B;
-    border-radius: 10px;
-    color: #ffffff;
-    width: 55%;
+}
+
+@media (max-width: 425px) {
+  .chat-messages {
+    font-size: 12px;
   }
-  
-  .message-form {
-    padding: 10px;
-    background-color: #f8f9fa;
+
+  .message-box {
+    font-size: 12px;
   }
-  
-  .message-input {
-    flex: 1;
-    border-radius: 10px;
-    border-right: none;
-    border-color: #ABABAB;
-  }
-  
-  .btn-send {
-    border-radius: 0px 10px 10px 0;
-    border-color: #ABABAB;
-    border-left: none;
-    color: #2D6ECF;
-    background-color: #ffffff;
-  }
-  
-  .chat-messages{
-    height: 70vh;
-    overflow-y: auto;
-  }
-  
-  /* Targets the scrollbar for any element with the class "announcement-scrollable-section" when viewed in webkit browsers like Chrome and Safari */
-  .chat-messages::-webkit-scrollbar {
-    width: .5rem;
-  }
-  
-  /* Targets the track (the background part) of the scrollbar */
-  .chat-messages::-webkit-scrollbar-track {
-    margin-top: 10px; /* Adds a top margin to the scrollbar track for spacing */
-    margin-bottom: 10px; /* Adds a bottom margin to the scrollbar track for spacing */
-  }
-  
-  /* Targets the thumb (the part of the scrollbar that indicates the scrolling position and can be dragged) */
-  .chat-messages::-webkit-scrollbar-thumb {
-    background-color: var(--primary-color); 
-    border-radius: 1rem; /* Rounds the corners of the scrollbar thumb to 1 rem for a pill-like shape */
-  }
+}
