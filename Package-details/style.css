@@ -481,7 +481,30 @@ body {
   font-size: calc(.8rem + 0.2vh);
 }
 #tour-option-info .custom-h4{
-  font-size: calc(.8rem + .5vh);
+  font-size: calc(.5rem + .2vh);
+  font-weight: 200;
+}
+#hotel-option-info{
+  width: 80%;
+  color: white;
+  background-color: var(--primary-color);
+  border-radius: 20px!important;
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 3vw;
+  padding-bottom: 0;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+#hotel-option-info .itinerary-image{
+  height: calc(150px + 5vh);
+  width:calc(100px + 5vw);
+}
+#hotel-option-info .custom-h2{
+  font-size: calc(.8rem + 0.2vh);
+}
+#hotel-option-info .custom-h4{
+  font-size: calc(.5rem + .2vh);
   font-weight: 200;
 }
 #package-info-time-title{
@@ -616,6 +639,43 @@ body {
 #add-tour-options-btn:hover{
   border-color: #c9d3e4;
 }
+#package-hotel-options-div{
+  width: 100%;
+  flex-direction: column;
+}
+#package-hotel-options-dropdown{
+  border: 2px solid #CFCFCF;
+  border-radius: 39px 39px 0px 0px;
+  color: var(--primary-color);
+  height: calc(80px + 1vh);
+  width: 90%;
+}
+#package-hotel-options-dropdown .custom-h1{
+  font-size: calc(10px + 2vh);
+  font-weight: 700;
+  margin-left: 3vw;
+}
+.hotel-options-content {
+  border: 2px solid #CFCFCF;
+  border-top: 0;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.hotel-options-content .custom-h2{
+  font-size: calc(5px + 2vh);
+  font-weight: 700;
+}
+#hotel-option-del-btn{
+  border-radius: 7px;
+}
+#add-hotel-options-btn{
+  border: 3px dashed var(--primary-color);
+}
+#add-hotel-options-btn:hover{
+  border-color: #c9d3e4;
+}
 /*#endregion itinerary right section end */
 
 /* Media queries */
@@ -677,6 +737,24 @@ body {
     width: 2vw; 
     height: 4vh;
   }
+  #package-hotel-options-div{
+    margin-top: 2vh;
+  }
+  #package-hotel-options .itinerary-image{
+    height: calc(100px + 5vh);
+  }
+  #hotel-option-info .custom-h2{
+    font-size: calc(1rem + 0.2vh);
+    font-weight: 500;
+  }
+  #hotel-option-info .custom-h4{
+    font-size: calc(.5rem + .5vh);
+    font-weight: 200;
+  }
+  #hotel-option-del-btn .hotel-del-btn-icon{
+    width: 2vw; 
+    height: 4vh;
+  }
 
 }
 @media (min-width: 769px) {
@@ -699,6 +777,9 @@ body {
     margin-top: calc(2rem + 2vh);
   }
   #package-tour-options-dropdown{
+    margin-top: calc(2rem + 2vh);
+  }
+  #package-hotel-options-dropdown{
     margin-top: calc(2rem + 2vh);
   }
   #package-info-time-title{
@@ -727,6 +808,16 @@ body {
     justify-self: end;
   }
   #tour-option-del-btn .tour-del-btn-icon{
+    width: 2vw; 
+    height: 4vh;
+  }
+  #hotel-option-info{
+    width: 90%;
+  }
+  #hotel-option-del-btn{
+    justify-self: end;
+  }
+  #hotel-option-del-btn .hotel-del-btn-icon{
     width: 2vw; 
     height: 4vh;
   }
@@ -858,9 +949,13 @@ body {
     font-size: calc(0.8rem + 0.5vw); 
     font-weight: 500;
   }
-  #tour-option-info .custom-h4{
-    font-size: calc(.70rem + .5vh);
+  #hotel-option-info .custom-h4{
+    font-size: calc(.5rem + .5vh);
     font-weight: 200;
+  }
+  #hotel-option-info .custom-h2{
+    font-size: calc(0.8rem + 0.5vw); 
+    font-weight: 500;
   }
   #package-info-time-title{
     white-space: nowrap;
@@ -890,6 +985,17 @@ body {
     width: 5vw;
     height: 5vh;
   }
+  #package-hotel-options-dropdown{
+    margin-top: calc(50px + 2vh);
+    width:  100%;
+  }
+  .hotel-options-content{
+    width:  100%;
+  }
+  #hotel-option-del-btn .hotel-del-btn-icon{
+    width: 5vw;
+    height: 5vh;
+  }
   /*#endregion Package itinerary details section */
 }
 @media (max-width: 425px) {
@@ -915,6 +1021,16 @@ body {
     font-weight: 500;
   }
   #tour-option-info .custom-h4{
+    font-size: calc(.6rem + .5vh);
+    font-weight: 300;
+    margin-top: 5px;
+    padding-bottom: calc(.2rem + .2vh);
+  }
+  #hotel-option-info .custom-h2{
+    font-size: calc(.50rem + .5vh);
+    font-weight: 500;
+  }
+  #hotel-option-info .custom-h4{
     font-size: calc(.6rem + .5vh);
     font-weight: 300;
     margin-top: 5px;
@@ -965,6 +1081,12 @@ body {
   #package-tour-options-dropdown .custom-h1{
     margin-left: 5vw;
   }
+  #package-hotel-options-dropdown{
+    margin-top: calc(30px + 1vh)
+  }
+  #package-hotel-options-dropdown .custom-h1{
+    margin-left: 5vw;
+  }
   #package-inclusions-div{
     margin-top: .1vh;
   }
@@ -981,6 +1103,19 @@ body {
     margin-right: 0;
   }
   #tour-option-info .itinerary-image{
+    height: calc(7.5rem + .5vh);
+    width: calc(3rem+ .5vw);
+  }
+  #package-hotel-options-div{
+    margin-top: .1vh;
+  }
+  #hotel-option-info{
+    width: 100%;
+    height: calc(120px + .5vh);
+    margin-left: 0;
+    margin-right: 0;
+  }
+  #hotel-option-info .itinerary-image{
     height: calc(7.5rem + .5vh);
     width: calc(3rem+ .5vw);
   }

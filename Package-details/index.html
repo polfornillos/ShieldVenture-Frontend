@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ShieldVenture Generated Package</title>
+    <title>Your Bookings</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
@@ -15,16 +15,10 @@
       </div>
 
       <ul class="sidebar-items list-unstyled px-3 d-flex flex-column">
-        <li>
+        <li style="background-color: rgba(240, 240, 240, 0.2);">
           <a href="#">
             <i class="fas fa-comment"></i>
             Chat
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fas fa-chart-simple"></i>
-            Traveler Report
           </a>
         </li>
         <li>
@@ -33,17 +27,22 @@
             Community
           </a>
         </li>
-        <!--highlight tab-->
-        <li style="background-color: rgba(240, 240, 240, 0.2);">
+        <li>
           <a href="#">
-            <i class="fas fa-bookmark"></i>
-            Generated Package
+            <i class="fas fa-plane"></i>
+            Travel History
           </a>
         </li>
         <li>
           <a href="#">
-            <i class="fas fa-box-open"></i>
-            Package List
+            <i class="fas fa-inbox"></i>
+            Inbox
+          </a>
+        </li>
+        <li style="background-color: rgba(240, 240, 240, 0.2);">
+          <a href="#">
+            <i class="fas fa-bookmark"></i>
+            Your Bookings
           </a>
         </li>
         <li class="mt-5">
@@ -239,8 +238,8 @@
                     <div class="col d-flex align-items-center">
                       <div class="d-flex align-items-center w-100">
                         <img class="d-block itinerary-image" src="vacation.jpg">
-                        <div class="d-flex col align-items-center justify-content-center">
-                          <div class="row ml-2 mr-2">
+                        <div class="d-flex col align-items-center">
+                          <div class="row ml-2" style="width: 100%;">
                             <span class="custom-h2"> Parasailing </span>
                             <span class="custom-h4"> Activity </span>
                             <span class="custom-h4"> No Added person </span>
@@ -262,6 +261,45 @@
               </div>  
             </div>
             <!--#endregion Tour options end-->
+            
+            <!--#region Hotel options-->
+            <div class="d-flex" id="package-hotel-options-div">               
+              <div class="d-flex justify-content-start align-items-center" id="package-hotel-options-dropdown">                 
+                <span class="custom-h1">Hotel options</span>
+              </div>
+              <div class="hotel-options-content">
+                <div class="row d-flex justify-content-center">
+                  <!-- hotel options for loop here -->
+                  <div class="border" id="hotel-option-info">
+                    <div class="col d-flex align-items-center">
+                      <div class="d-flex align-items-center w-100">
+                        <img class="d-block itinerary-image" src="vacation.jpg">
+                        <div class="d-flex col align-items-center">
+                          <div class="row ml-2" style="width: 100%;">
+                            <span class="custom-h2"> 1 Double Bedroom </span>
+                            <span class="custom-h4"> Shangri-La Boracay </span>
+                            <span class="custom-h4"> w/ Breakfast, Lunch , and Dinner </span>
+                            <span class="custom-h4"> 2 Adults</span>
+                            <span class="custom-h4"> July 01-03 ,2023</span>
+                          </div>
+                          <div>
+                            <button type="button" class="btn btn-danger"  id="hotel-option-del-btn"><svg xmlns="http://www.w3.org/2000/svg" width="5vw" height="5vh" fill="currentColor" class="bi bi-trash hotel-del-btn-icon" viewBox="0 0 16 16">
+                              <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
+                              <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
+                            </svg></button><!-- delete button -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- hotel options for loop end here -->
+                </div>
+                <button type="button" class="btn btn-outline-primary mt-3 mb-3 w-100" id="add-tour-options-btn"><span class="custom-h2">ADD HOTEL OPTIONS</span>
+                <span style="margin-left: 15px; font-size: calc(1rem + 1vh);">+</span></button>
+              </div>  
+            </div>
+            <!--#endregion Hotel options end-->
+          
           </div>
           <!-- #endregion Itinerary section end-->
 
