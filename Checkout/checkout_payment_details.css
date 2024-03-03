@@ -1,0 +1,66 @@
+@import "style.css";
+/* Checkout container */
+
+.payment-method-info-container {
+  padding: 50px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.payment-information-container label {
+  margin-bottom: 5px;
+}
+
+.credit-card-btn {
+  border: 1px solid rgb(206, 206, 206);
+  color: rgb(167, 167, 167);
+}
+
+.paypal-btn,
+.pay-now-btn {
+  width: 170px;
+  font-weight: 600;
+  color: white;
+  border: none;
+  background-color: var(--primary-color);
+}
+
+.paypal-btn:hover,
+.pay-now-btn:hover {
+  background-color: var(--primary-darken);
+}
+
+@media (max-width: 560px) {
+  .booking-details-container {
+    width: 100%;
+  }
+
+  .booking-summary-container {
+    width: 100%;
+  }
+  .payment-information-container {
+    padding: 0 !important;
+    width: 100%;
+  }
+  .payment-method-info-container {
+    padding: 30px !important;
+  }
+  .payment-method-btn-container {
+    flex-direction: column;
+  }
+
+  .paypal-btn,
+  .pay-now-btn {
+    width: 100%;
+  }
+
+  .card-detail-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-detail-row .col {
+    margin-bottom: 10px;
+  }
+}
