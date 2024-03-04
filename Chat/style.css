@@ -11,6 +11,7 @@
   box-sizing: border-box; /* Ensures padding does not affect overall width */
 }
 
+
 body,
 html {
   font-family: "Poppins", sans-serif;
@@ -109,6 +110,77 @@ body {
   flex-grow: 1;
   padding-top: 56px;
 }
+/*#region generated package content */
+.gen-package-title-info{
+  height: auto;
+  margin-top: 50vh;
+  margin-bottom: 5vh;
+}
+.gen-package-title-info .gen-package-location{
+  font-size: calc(40px + .50vh);
+  font-weight: 600;
+}
+.gen-package-title-info .gen-package-flight-info{
+  font-size: calc(22px + .25vh);
+  font-weight: 300;
+}
+.gen-package-title-info .gen-package-info-divider{
+  font-size: calc(50px + .25vh);
+  font-weight: 200;
+}
+.card-container-title{
+  font-size: calc(24px + .5vh);
+  font-weight: 600;
+}
+.container .community-container{
+  padding-left: 0;
+}
+.container .gen-package-container{
+  padding-left: 0;
+}
+
+
+.gen-package-card {
+  width: 100%;
+  white-space: nowrap;
+  padding-left: 2px;
+  overflow-x: auto;
+}
+.gen-package-card::-webkit-scrollbar {
+  width: 0.3em;
+  height: 10px;
+}
+
+.gen-package-card::-webkit-scrollbar-track {
+  margin-top: 10px; 
+  margin-bottom: 10px; 
+}
+
+.gen-package-card::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color); 
+  border-radius: 1rem; 
+}
+
+.card-container {
+  width: 20rem;
+  height: 25rem;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 2px #888888;
+}
+
+.card-text {
+  white-space: normal;
+  max-height: 100px; 
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.card-img-top {
+  border-radius: 10px 10px 0 0;
+  height: 12rem;
+}
+
+/*#endregion generated package content */
 
 /* Media queries */
 @media (min-width: 769px) {
@@ -120,7 +192,29 @@ body {
     margin-left: auto;
   }
 }
-
+@media (max-width: 1024px) {
+  /* generated apckage section */
+  .gen-package-title-info{
+    height: auto;
+    margin-top: 30vh;
+  }
+  .gen-package-title-info .gen-package-location{
+    font-size: calc(40px + .25vh);
+    font-weight: 600;
+  }
+  .gen-package-title-info .gen-package-flight-info{
+    font-size: calc(22px + .15vh);
+    font-weight: 300;
+  }
+  .gen-package-title-info .gen-package-info-divider{
+    font-size: calc(50px + .15vh);
+    font-weight: 200;
+  }
+  .card-container-title{
+    font-size: calc(15px + .5vh);
+    font-weight: 600;
+  }
+}
 @media (max-width: 768px) {
   .sidebar-items {
     margin-top: 80px;
@@ -152,5 +246,67 @@ body {
   #content {
     margin-left: 0;
     width: 100%;
+  }
+
+  /* generated package section */
+  .gen-package-title-info{
+    margin-top: 45vh;
+  }
+  .gen-package-title-info .gen-package-location{
+    font-size: calc(20px + .15vh);
+    font-weight: 600;
+  }
+  .gen-package-title-info .gen-package-flight-info{
+    font-size: calc(12px + .5vh);
+    font-weight: 300;
+  }
+  .gen-package-title-info .gen-package-info-divider {
+    font-size: calc(15px + .5vh);
+    font-weight: 400;
+  }
+  .card-title{
+    font-size: calc(15px + .15vh);
+    font-weight: 600;
+    white-space: normal;
+  }
+  .card-text{
+    font-size: calc(8px + .5vh);
+    font-weight: 400;
+    max-height: 95px; 
+  }
+  .card-body {
+    width: 30vw;
+  }
+  
+}
+@media (max-width: 425px){
+  /* gen package section */
+  .container-fluid{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .gen-package-title-info{
+    margin-top: 30vh
+  }
+  .card-container {
+    width: calc(12rem + 0.5vh);
+    height: calc(16rem + 0.5vh);
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px #888888;
+  }
+  .card-title{
+    font-size: calc(10px + .5vh);
+    font-weight: 600;
+  }
+  .card-text{
+    font-size: calc(7px + .5vh);
+    font-weight: 400;
+    max-height: 60px;
+  }
+  .card-body {
+    width: 30vw;
+  }
+  .card-img-top{
+    height: 5rem;
   }
 }
