@@ -1,11 +1,56 @@
 body {
   background-color: rgb(243, 243, 243);
 }
+
+table {
+  --bs-table-hover-bg: #eff5ff !important;
+}
+
 .travel-package-table-container {
   overflow: auto;
 }
 
 .travel-package-table-container thead {
   background-color: #2d6ecf;
-  color
+  color: white;
+  font-weight: 400;
+}
+
+#travelPackageTable td {
+  padding: 1rem;
+}
+
+#travelPackageTable_wrapper .dt-layout-cell {
+  padding-top: 0;
+}
+
+.pagination {
+  padding: 1rem 0 1rem 1rem;
+}
+
+.dt-paging {
+  padding: 1rem 1rem 1rem 0;
+}
+
+.dataTables_info {
+  font-weight: 500;
+}
+
+.paginate_button.active a {
+  background-color: #2d6ecf !important;
+}
+
+.form-label {
+  color: #2d6ecf;
+  font-weight: 500;
+}
+
+.required {
+  color: red;
+}
+@media (max-width: 767px) {
+  .pagination,
+  .dt-paging {
+    padding: 1rem 0 0 0;
+  }
 }
