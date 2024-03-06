@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>PDF Template</title>
+
+    <style>
+      body,
+      html {
+        font-family: "Poppins", sans-serif;
+        height: 100%;
+        margin: 30px;
+      }
+    </style>
+  </head>
+
+  <body style="width: 210mm; height: 297mm; margin: 0 auto">
+    <div style="width: 100%">
+      <h1 class="text-center my-5">Ayahtek Payslip</h1>
+      <table style="width: 100%">
+        <tbody>
+          <tr>
+            <td style="text-align: left; width: 75%">
+              <div>
+                <h4>Payslip ID: {{ $payslip->id }}</h4>
+                <h4>Employee ID: {{ $employee->id }}</h4>
+                <h4>Pay Period: {{ $payslip->pay_period }}</h4>
+                <h4>Release Date: {{ $payslip->release_date }}</h4>
+              </div>
+            </td>
+            <td style="text-align: right; margin: 0 0; text-wrap: wrap">
+              <div>
+                <h4>{{ $employee->f_name . ' ' . $employee->m_name . ' ' . $employee->l_name }}</h4>
+                <h4>{{ $employee->employeeType->type }} - {{ $employee->designation }}</h4>
+                <h4>{{ $employee->email }} - {{ $employee->contact }}</h4>
+                <h4>{{ $employee->address_line }}</h4>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <hr style="border: 1px solid black; width: 100%" />
+
+      <div class="text-center">
+        <div style="display: flex; flex-direction: column; text-align: center">
+          <h3>Gross Breakdown</h3>
+          <table class="table table-striped" style="width: 100%">
+            <thead>
+              <tr>
+                <th style="width: 50%">Field</th>
+                <th style="width: 50%">Value</th>
+              </tr>
+            </thead>
+            <tbody style="width: 100%">
+              @foreach ($payslipGross as $index => $grossItem)
+              <tr class="{{ $index % 2 == 0 ? 'even-row' : 'odd-row' }}">
+                <td>{{ $grossItem->name }}</td>
+                <td>{{ number_format($grossItem->value, 2, '.', ',') }}</td>
+              </tr>
+              @endforeach
+              <tr style="text-align: center">
+                <td style="border-top: 1px solid black" colspan="2"></td>
+              </tr>
+
+              <tr style="text-align: center">
+                <td>
+                  <strong>Total</strong>
+                </td>
+                <td>{{ number_format($payslip->gross_salary, 2, '.', ',') }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div style="display: flex; flex-direction: column; text-align: center">
+          <h3>Deductables Breakdown</h3>
+          <table class="table table-striped" style="width: 100%">
+            <thead>
+              <tr>
+                <th style="width: 50%">Field</th>
+                <th style="width: 50%">Value</th>
+              </tr>
+            </thead>
+            <tbody style="width: 100%">
+              @foreach ($payslipDeductables as $index => $deductableItem)
+              <tr class="{{ $index % 2 == 0 ? 'even-row' : 'odd-row' }}">
+                <td>{{ $deductableItem->name }}</td>
+                <td>{{ number_format($deductableItem->value, 2, '.', ',') }}</td>
+              </tr>
+              @endforeach
+              <tr style="text-align: center">
+                <td style="border-top: 1px solid black" colspan="2"></td>
+              </tr>
+              <tr style="text-align: center">
+                <strong> <strong>Total</strong></strong>
+                <td>{{ number_format($payslip->total_deductions, 2, '.', ',') }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="">
+          <h3>Summary</h3>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Field</th>
+                <th>Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Gross Salary</th>
+                <td>{{ number_format($payslip->gross_salary, 2, '.', ',') }}</td>
+              </tr>
+              <tr>
+                <th scope="row">Total Deductions</th>
+                <td>{{ number_format($payslip->total_deductions, 2, '.', ',') }}</td>
+              </tr>
+              <tr>
+                <th scope="row">Net Salary</th>
+                <td>{{ number_format($payslip->net_salary, 2, '.', ',') }}</td>
+              </tr>
+              <tr>
+                <th scope="row">Absences</th>
+                <td>{{ $payslip->absences }} Hours</td>
+              </tr>
+              <tr>
+                <th scope="row">Remarks</th>
+                <td>{{ $payslip->remarks }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
