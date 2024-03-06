@@ -14,13 +14,3 @@ $(document).ready(function () {
     order: [[0, "desc"]],
   });
 });
-
-document.addEventListener("DOMContentLoaded", function () {
-  var myModal = new bootstrap.Modal(document.getElementById("exampleModal"), {
-    keyboard: false,
-  });
-
-  document.getElementById("addPackageBtn").addEventListener("click", function () {
-    myModal.show();
-  });
-});
