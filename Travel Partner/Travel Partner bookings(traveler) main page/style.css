@@ -1,0 +1,327 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --sidebar-width: 280px;
+  --primary-color: #2d6ecf;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* Ensures padding does not affect overall width */
+}
+
+
+body,
+html {
+  font-family: "Poppins", sans-serif;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  background-color: #f8f9fa;
+  overflow-x: hidden; /* Prevents horizontal scroll */
+}
+
+/* Sidebar */
+#sidebar {
+  background-color: var(--primary-color);
+  color: white;
+  width: var(--sidebar-width);
+  transition: transform 0.3s;
+  z-index: 1030;
+  height: 100vh; /* Full height */
+  position: fixed;
+}
+
+.sidebar-items {
+  margin-top: 150px;
+  gap: 6px;
+}
+
+.sidebar-items a {
+  text-decoration: none;
+  font-size: 15px;
+  color: white;
+}
+
+.sidebar-items i {
+  margin-right: 6px;
+}
+
+.sidebar-items li {
+  border-radius: 5px;
+  padding: 8px;
+  transition: background-color 0.3s;
+}
+
+.sidebar-items li:hover {
+  border-radius: 5px;
+  padding: 8px;
+  background-color: rgba(240, 240, 240, 0.2);
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.sidebar-logo {
+  max-width: 210px;
+  margin-top: 40px;
+}
+
+.bottom-sidebar {
+  position: fixed;
+  bottom: 0;
+  width: var(--sidebar-width);
+  padding: 30px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+}
+
+.bottom-sidebar .email {
+  font-size: 13px;
+  font-weight: 200;
+}
+
+/* Navigation bar */
+.navbar {
+  width: calc(100% - var(--sidebar-width));
+  position: fixed;
+  top: 0;
+  border-bottom: solid 1px rgb(192, 192, 192);
+  background-color: white;
+  z-index: 1031;
+}
+
+.navbar-icons a {
+  color: var(--primary-color);
+}
+
+.navbar-icons {
+  gap: 15px;
+}
+
+/* Main Content */
+#content {
+  margin-left: var(--sidebar-width);
+  flex-grow: 1;
+  padding-top: 56px;
+}
+/* add package button */
+.add-bookings-div .btn-primary{
+  background-color: var(--primary-color) !important;
+  font-size: 3vh;
+  font-weight: 500;
+  text-align: center; 
+  padding: 20px 5vw;
+}
+/*#region packages table*/
+.outer-bookings-table::-webkit-scrollbar {
+  width: 0.3em;
+  height: 10px;
+}
+
+.outer-bookings-table::-webkit-scrollbar-track {
+  margin-top: 10px; 
+  margin-bottom: 10px; 
+}
+
+.outer-bookings-table::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color); 
+  border-radius: 1rem; 
+}
+.outer-bookings-table {
+  margin-top: 5vh;
+  border: 1px solid #7a7b7b;
+  border-radius: 1.2em 1.2em 0 0;
+  box-sizing: border-box;
+  text-align: center;
+  overflow: auto;
+}
+.bookings-table {
+  border-collapse: collapse;
+  overflow: hidden;
+  width: 100%;
+  margin: 0;
+}
+
+.bookings-table td {
+  background: white;
+  padding: 0 20px;
+}
+.bookings-table th {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 50px 0;
+  font-size: calc(1rem + .25vh);
+  white-space: nowrap;
+}
+
+.bookings-table tr:last-child td {
+  border-bottom: none;
+}
+
+.traveler-circle-logo{
+  width: 70px;
+  height: 69.38px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 100%;
+  margin-top: .5vh;
+  margin-left: 2vh;
+}
+.tbl-traveler-name{
+  margin-left: 10px;
+  margin-top: 20px;
+  white-space: nowrap;
+}
+.bookings-table .tbl-booking-status_bookings{
+  white-space: nowrap;
+}
+
+.bookings-table .traveler-info-cell{
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+.bookings-table .tbl-booking-status_bookings{
+  white-space: nowrap;
+}
+.bookings-table .tbl-travel-package-name,
+.bookings-table .tbl-book-date,
+.bookings-table .tbl-booking-status{
+  padding-top: 53px;
+  white-space: nowrap;
+}
+.tbl-edit-btn_bookings{
+  margin-right: calc(.25rem + .25vw);
+}
+.tbl-edit-btn_bookings,
+.tbl-del-btn_bookings{
+  background-color: var(--primary-color);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 100%;
+  width: calc(2rem + 1vw);
+  height: calc(2rem + 1vw);
+  border: none;
+  margin-top: 50px;
+}
+/*#endregion packages table*/
+
+
+/* Media queries */
+@media (min-width: 2000px) {
+  /* Package table section */
+  .bookings-table td{
+    font-size: 3vh;
+    text-align: center;
+  }
+  .bookings-table th{
+    font-size: 4vh;
+  }
+}
+@media (min-width: 769px) {
+  .navbar-toggler {
+    display: none;
+  }
+
+  .navbar-brand {
+    margin-left: auto;
+  }
+  /* Package table section */
+  .bookings-table .tbl-booking-status_bookings{
+    text-align: center;
+  }
+  .bookings-table td{
+    padding-bottom: 20px;
+  }
+  .tbl-edit-btn_bookings .bi-pencil-square,
+  .tbl-del-btn_bookings .bi-trash{
+    width:calc(1rem + 2vh); 
+    height:calc(1rem + 2vh);
+  }
+}
+@media (max-width: 768px) {
+  .sidebar-items {
+    margin-top: 80px;
+    gap: 10px;
+  }
+
+  .navbar-toggler {
+    display: block; /* Show burger menu */
+  }
+
+  .navbar {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  #sidebar {
+    margin-top: 73px;
+    transform: translateX(-100%); /* Hide sidebar */
+  }
+
+  .bottom-sidebar {
+    bottom: 73px;
+  }
+
+  #sidebar.active {
+    transform: translateX(0); /* Show sidebar */
+  }
+
+  #content {
+    margin-left: 0;
+    width: 100%;
+  }
+  /*package table*/
+  .outer-bookings-table{
+    padding-bottom: 10px;
+  }
+  .bookings-table td {
+    font-size: calc(.9rem + .25vh);
+    text-align: center;
+  }
+  .bookings-table .traveler-info-cell{
+    padding-top: 8vh;
+    padding-bottom: 8vh;
+  }
+  .bookings-table .tbl-travel-package-name,
+  .bookings-table .tbl-book-date,
+  .bookings-table .tbl-booking-status{
+    white-space: nowrap;
+    padding: 10vh;
+  }
+  .bookings-table th {
+    font-size: calc(1rem + .5vh);
+    padding: 30px 10px;
+  }
+  .traveler-circle-logo{
+    width: calc(70px + .25vw);
+    height: calc(69.38px + .25vh);
+    align-content: center;
+  }
+  .bookings-table .tbl-booking-status_bookings{
+    padding-top: 8vh;
+    white-space: nowrap;
+  }
+  .tbl-edit-btn_bookings{
+    margin-right: calc(.5rem + .25vw);
+  }
+  .tbl-edit-btn_bookings,
+  .tbl-del-btn_bookings{
+    background-color: var(--primary-color);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 100%;
+    width: calc(3rem + .2vw);
+    height: calc(3rem + .2vw);
+    border: none;
+    margin-top: 15px;
+  }
+  .tbl-edit-btn_bookings .bi-pencil-square,
+  .tbl-del-btn_bookings .bi-trash{
+    width:calc(1rem + 2vh); 
+    height:calc(1rem + 2vh);
+  }
+
+}

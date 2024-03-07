@@ -1,0 +1,112 @@
+body {
+  background-color: rgb(243, 243, 243);
+}
+
+h2 {
+  color: #2d6ecf;
+}
+.carousel-item {
+  height: 700px;
+}
+
+.carousel-inner img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.form-label {
+  font-size: 20px;
+  font-weight: 500;
+  color: #2d6ecf;
+}
+
+.row,
+.col {
+  /* outline: 1px solid red; */
+}
+
+.container__months {
+  width: 400px !important;
+  height: 400px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.month-item {
+  width: 100% !important;
+  height: 100%;
+  font-size: 15px;
+}
+
+.container__days {
+  gap: 20px;
+}
+
+.inclusions-container,
+.exclusions-container,
+.tour-options-container,
+.hotel-options-container {
+  border: solid 1px rgb(209, 209, 209);
+  border-radius: 5px;
+  background-color: white;
+}
+
+.inclusions-header,
+.exclusions-header,
+.tour-options-header,
+.hotel-options-header {
+  color: #2d6ecf;
+  border-bottom: solid 1px rgb(209, 209, 209);
+}
+
+.inclusions-body label,
+.exclusions-body label {
+  font-size: 13px;
+}
+
+.add-inclusion-btn,
+.add-exclusion-btn,
+.add-tour-option-btn,
+.add-hotel-option-btn {
+  border: 2px dotted #2d6ecf;
+  font-weight: 500;
+  color: #2d6ecf;
+}
+
+.add-inclusion-btn:hover,
+.add-exclusion-btn:hover,
+.add-tour-option-btn:hover,
+.add-hotel-option-btn:hover {
+  background-color: #2d6ecf;
+  color: white;
+}
+
+@media (max-width: 767px) {
+  .carousel-item {
+    height: 100%;
+  }
+
+  .container__months {
+    width: 275px !important;
+    height: 275px;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  .month-item {
+    width: 100% !important;
+    height: 100%;
+    font-size: 12px;
+  }
+  .container__days {
+    gap: 0;
+  }
+}
+
+@media (max-width: 446px) {
+  .form-label {
+    font-size: 12px;
+  }
+}

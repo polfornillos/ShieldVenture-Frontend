@@ -108,7 +108,7 @@
 
 .activities-title {
   color: white;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 500;
 }
 
@@ -129,7 +129,7 @@
 
 .hotels-title {
   color: white;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 500;
 }
 
@@ -157,13 +157,31 @@
   border-radius: 20px;
 }
 
-@media (max-width: 767px) {
-  .miles-consumed-container {
-    margin-top: 50px;
+@media (max-width: 1064px) {
+  .bookings-container-header {
+    flex-direction: column;
+  }
+
+  .bookings-container-header .form-outline {
+    margin: 0 !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .form-outline #dateRangePicker {
+    margin-top: 10px;
+    width: 100%;
+    max-width: 100%;
   }
 
   .report-section {
-    margin: 0 20px;
+    margin: 20px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .miles-consumed-container {
+    margin-top: 50px;
   }
 
   .report-card {
@@ -185,26 +203,14 @@
   }
 }
 
-@media (max-width: 960px) {
-  .bookings-container-header {
-    flex-direction: column;
-  }
-
-  .bookings-container-header .form-outline {
-    margin: 0 !important;
-  }
-
-  .form-outline #dateRangePicker {
-    margin-top: 10px;
-    width: 100%;
-    max-width: 100%;
-  }
-}
-
 @media (max-width: 425px) {
-  .report-section {
-    margin: 20px !important;
+  .bookings-container-body,
+  .traveled-container-body,
+  .hotels-container-body,
+  .activities-container-body {
+    height: 320px;
   }
+
   .hotels-title,
   .booking-title,
   .activities-title,
@@ -217,6 +223,13 @@
   .activities-container,
   .traveled-container {
     padding: 15px;
+  }
+}
+
+@media (max-width: 375px) {
+  .report-section {
+    margin: 10px !important;
+    padding-top: 20px;
   }
 }
 
