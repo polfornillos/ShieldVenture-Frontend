@@ -10,3 +10,15 @@
   font-weight: 500;
   color: #2d6ecf;
 }
+
+@media (max-width: 767px) {
+  .form-label {
+    font-size: 13px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="button"] {
+    font-size: 13px;
+  }
+}
