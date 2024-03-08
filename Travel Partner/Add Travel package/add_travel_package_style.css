@@ -92,15 +92,28 @@ h2 {
   height: 100%;
 }
 
+.tour-option-details h5 {
+  font-size: 15px;
+}
+
+.tour-option-details p {
+  font-size: 12px;
+}
+
 .hotel-option {
   background-color: #2d6ecf;
   color: white;
   height: 150px;
   overflow: auto;
 }
-
+.hotel-img-container {
+  height: 100%;
+  width: 150px;
+}
 .hotel-option img {
   height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .hotel-option li {
@@ -112,6 +125,18 @@ h2 {
   background-color: white;
   border: solid 2px #2d6ecf;
   border-radius: 5px;
+}
+
+.add-package-btn {
+  width: 320px;
+  background-color: #2d6ecf;
+  color: white;
+  font-weight: 500;
+}
+
+.add-package-btn:hover {
+  background-color: #1e53a3;
+  color: white;
 }
 @media (max-width: 767px) {
   .carousel-item {
@@ -139,5 +164,35 @@ h2 {
 @media (max-width: 446px) {
   .form-label {
     font-size: 12px;
+  }
+}
+
+@media (max-width: 425px) {
+  .hotel-option {
+    flex-direction: column;
+  }
+
+  .hotel-img-container {
+    height: 100%;
+    width: 100%;
+  }
+
+  .hotel-option-details {
+    padding: 1rem 0 1rem 0;
+  }
+}
+
+@media (max-width: 375px) {
+  .hotel-option {
+    flex-direction: column;
+  }
+
+  .hotel-img-container {
+    height: 100%;
+    width: 100%;
+  }
+
+  .hotel-option-details {
+    padding: 1rem 0 1rem 0;
   }
 }
