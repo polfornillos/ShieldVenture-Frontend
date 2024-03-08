@@ -82,6 +82,37 @@ h2 {
   color: white;
 }
 
+.tour-option {
+  background-color: #2d6ecf;
+  color: white;
+  height: 100px;
+}
+
+.tour-option img {
+  height: 100%;
+}
+
+.hotel-option {
+  background-color: #2d6ecf;
+  color: white;
+  height: 150px;
+  overflow: auto;
+}
+
+.hotel-option img {
+  height: 100%;
+}
+
+.hotel-option li {
+  font-size: 13px;
+}
+
+.itinerary-container {
+  width: 100%;
+  background-color: white;
+  border: solid 2px #2d6ecf;
+  border-radius: 5px;
+}
 @media (max-width: 767px) {
   .carousel-item {
     height: 100%;

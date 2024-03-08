@@ -87,7 +87,82 @@
           <div class="row m-0 p-0 mt-5">
             <h2 class="mt-3"><i class="fa-solid fa-plane"></i> Itinerary</h2>
             <div class="row m-0 p-0 mt-3">
-              <div class="col p-3"></div>
+              <div class="col p-sm-3 p-0">
+                <div class="itinerary-section mb-3">
+                  <h3>DAY 1</h3>
+                  <div class="itinerary-container shadow-sm px-sm-5 px-3 pb-5">
+                    <div class="itinerary-activity-container mt-5">
+                      <div class="row">
+                        <div class="col">
+                          <div class="form-group mb-3">
+                            <label class="mb-2 fw-bold" for="">Activity 1</label>
+                            <select name="" class="form-select form-control activity-dropdown">
+                              <option value="" disabled selected hidden>Select activity</option>
+                              <option value="">Airport</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6 col-12">
+                          <label class="mb-2 fw-bold" for="">Start time</label>
+                          <input type="text" class="form-control" id="startTime" placeholder="Select Time" />
+                        </div>
+                        <div class="col-sm-6 col-12">
+                          <label class="mb-2 fw-bold" for="">End time</label>
+                          <input type="text" class="form-control" id="endTime" placeholder="Select Time" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="itinerary-activity-container mt-5">
+                      <div class="row">
+                        <div class="col">
+                          <div class="form-group mb-3">
+                            <label class="mb-2 fw-bold" for="">Activity 2</label>
+                            <select name="" class="form-select form-control activity-dropdown">
+                              <option value="" disabled selected hidden>Select activity</option>
+                              <option value="">Airport</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <label class="mb-2 fw-bold" for="">Start time</label>
+                          <input type="text" class="form-control" id="startTime" placeholder="Select Time" />
+                        </div>
+                        <div class="col">
+                          <label class="mb-2 fw-bold" for="">End time</label>
+                          <input type="text" class="form-control" id="endTime" placeholder="Select Time" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="itinerary-activity-container mt-5">
+                      <div class="row">
+                        <div class="col">
+                          <div class="form-group mb-3">
+                            <label class="mb-2 fw-bold" for="">Activity 3</label>
+                            <select name="" class="form-select form-control activity-dropdown">
+                              <option value="" disabled selected hidden>Select activity</option>
+                              <option value="">Airport</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <label class="mb-2 fw-bold" for="">Start time</label>
+                          <input type="text" class="form-control" id="startTime" placeholder="Select Time" />
+                        </div>
+                        <div class="col">
+                          <label class="mb-2 fw-bold" for="">End time</label>
+                          <input type="text" class="form-control" id="endTime" placeholder="Select Time" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div class="col-lg-4 col-12 p-xxl-5 p-md-4">
                 <div class="row">
                   <div class="inclusions-container px-0">
@@ -130,21 +205,51 @@
                 <div class="row mt-3">
                   <div class="tour-options-container px-0">
                     <h4 class="p-3 tour-options-header">Tour options</h4>
-                    <div class="tour-options-body">
-                      <div class="add-tour-options-container col"></div>
-                      <div class="col p-3">
-                        <button type="button" id="addTourOptionBtn" class="add-tour-option-btn btn w-100 p-3">
-                          <i class="fas fa-plus-circle"></i> Add Tour options
-                        </button>
+                    <div class="tour-options-body d-flex flex-column mt-3" style="gap: 10px">
+                      <div class="col px-3">
+                        <div class="tour-option rounded d-flex align-items-center shadow-sm mb-3">
+                          <img class="rounded-start" src="https://placehold.co/400" />
+                          <div class="tour-option-details px-3">
+                            <h5 class="mb-0 activity-name">Parasailing</h5>
+                            <p class="mb-0">Activity</p>
+                          </div>
+                        </div>
+                        <div class="tour-option rounded d-flex align-items-center shadow-sm mb-3">
+                          <img class="rounded-start" src="https://placehold.co/400" />
+                          <div class="tour-option-details px-3">
+                            <h5 class="mb-0 activity-name">Snorkling</h5>
+                            <p class="mb-0">Activity</p>
+                          </div>
+                        </div>
                       </div>
+                    </div>
+                    <div class="col p-3">
+                      <button type="button" id="addTourOptionBtn" class="add-tour-option-btn btn w-100 p-3">
+                        <i class="fas fa-plus-circle"></i> Add Tour options
+                      </button>
                     </div>
                   </div>
                 </div>
                 <div class="row mt-3">
                   <div class="hotel-options-container px-0">
                     <h4 class="p-3 hotel-options-header">Hotel options</h4>
-                    <div class="hotel-options-body">
-                      <div class="add-hotel-options-container col"></div>
+                    <div class="hotel-options-body d-flex flex-column mt-3" style="gap: 10px">
+                      <div class="add-hotel-options-container col">
+                        <div class="col px-3">
+                          <div class="hotel-option rounded d-flex align-items-center shadow-sm">
+                            <img class="rounded-start" src="https://placehold.co/400" />
+                            <div class="hotel-option-details px-3">
+                              <h6 class="mb-2 hotel-name">1 DOUBLE BEDROOM</h6>
+                              <ul class="ps-3 mb-0">
+                                <li>Shangri-la Boracay</li>
+                                <li>w/ Breakfast, Lunch, and Dinner</li>
+                                <li>2 Adults</li>
+                                <li>July 01-03, 2023</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                       <div class="col p-3">
                         <button type="button" id="addHotelOptionBtn" class="add-hotel-option-btn btn w-100 p-3">
                           <i class="fas fa-plus-circle"></i> Add Hotel options
@@ -183,6 +288,10 @@
     <!-- Litepicker -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/litepicker/dist/css/litepicker.css" />
     <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
+
+    <!-- Flatpcker -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
     <!-- Custom Script in the bottom to work -->
     <script src="add_travel_package_script.js"></script>
