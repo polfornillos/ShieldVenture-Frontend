@@ -11,8 +11,21 @@
   color: #2d6ecf;
 }
 
+.data-field {
+  font-size: 18px;
+}
+
 @media (max-width: 767px) {
-  .form-label {
+  .form-label,
+  .data-field {
+    font-size: 13px;
+  }
+
+  .page-header {
+    font-size: 23px;
+  }
+
+  .view-package-btn {
     font-size: 13px;
   }
 
