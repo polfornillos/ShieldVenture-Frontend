@@ -111,7 +111,7 @@ body {
   padding-top: 56px;
 }
 /* add package button */
-.add-activities-div .btn-primary{
+.add-hotel-div .btn-primary{
   background-color: var(--primary-color) !important;
   font-size: 3vh;
   font-weight: 500;
@@ -119,21 +119,21 @@ body {
   padding: 20px 5vw;
 }
 /*#region packages table*/
-.outer-activities-table::-webkit-scrollbar {
+.outer-hotel-table::-webkit-scrollbar {
   width: 0.3em;
   height: 10px;
 }
 
-.outer-activities-table::-webkit-scrollbar-track {
+.outer-hotel-table::-webkit-scrollbar-track {
   margin-top: 10px; 
   margin-bottom: 10px; 
 }
 
-.outer-activities-table::-webkit-scrollbar-thumb {
+.outer-hotel-table::-webkit-scrollbar-thumb {
   background-color: var(--primary-color); 
   border-radius: 1rem; 
 }
-.outer-activities-table {
+.outer-hotel-table {
   margin-top: 5vh;
   border: 1px solid #7a7b7b;
   border-radius: 1.2em 1.2em 0 0;
@@ -141,18 +141,18 @@ body {
   text-align: center;
   overflow: auto;
 }
-.activities-table {
+.hotel-table {
   border-collapse: collapse;
   overflow: hidden;
   width: 100%;
   margin: 0;
 }
 
-.activities-table td {
+.hotel-table td {
   background: white;
   padding: 0 20px;
 }
-.activities-table th {
+.hotel-table th {
   background-color: var(--primary-color);
   color: white;
   padding: 50px 0;
@@ -160,11 +160,11 @@ body {
   white-space: nowrap;
 }
 
-.activities-table tr:last-child td {
+.hotel-table tr:last-child td {
   border-bottom: none;
 }
 
-.activities-circle-logo{
+.hotel-circle-logo{
   width: 70px;
   height: 69.38px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
@@ -172,44 +172,28 @@ body {
   margin-top: .5vh;
   margin-left: 2vh;
 }
-.tbl-activity-name{
+.tbl-hotel-name{
   margin-left: 10px;
   margin-top: 20px;
   white-space: nowrap;
 }
-.activities-table .tbl-act-buttons_Activities{
-  white-space: nowrap;
-}
 
-.activities-table .activities-info-cell{
+.hotel-table .hotel-info-cell{
   padding-top: 10vh;
   padding-bottom: 10vh;
 }
-.activities-table .tbl-act-address,
-.activities-table .tbl-act-description{
+.hotel-table .tbl-hotel-address,
+.hotel-table .tbl-hotel-description{
   padding-top: 5vh;
 }
-.activities-table .tbl-act-buttons_Activities,
-.activities-table .tbl-act-price,
-.activities-table .tbl-act-duration,
-.activities-table .tbl-act-max-slots{
+.hotel-table .tbl-hotel-buttons_Hotel{
   white-space: nowrap;
 }
-.activities-table .tbl-act-price,
-.activities-table .tbl-act-duration,
-.activities-table .tbl-act-max-slots{
-  white-space: nowrap;
-  padding: 10vh;
-}
-.activities-table .tbl-act-description,
-.activities-table .tbl-act-address{
-  
-}
-.tbl-edit-btn_Activities{
+.tbl-edit-btn_Hotel{
   margin-right: calc(.25rem + .25vw);
 }
-.tbl-edit-btn_Activities,
-.tbl-del-btn_Activities{
+.tbl-edit-btn_Hotel,
+.tbl-del-btn_Hotel{
   background-color: var(--primary-color);
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   border-radius: 100%;
@@ -224,11 +208,11 @@ body {
 /* Media queries */
 @media (min-width: 2000px) {
   /* Package table section */
-  .activities-table td{
+  .hotel-table td{
     font-size: 3vh;
     text-align: center;
   }
-  .activities-table th{
+  .hotel-table th{
     font-size: 4vh;
   }
 }
@@ -241,16 +225,16 @@ body {
     margin-left: auto;
   }
   /* Package table section */
-  .activities-table .tbl-act-buttons_Activities{
-    text-align: center;
-  }
-  .activities-table td{
+  .hotel-table td{
     padding-bottom: 20px;
   }
-  .tbl-edit-btn_Activities .bi-pencil-square,
-  .tbl-del-btn_Activities .bi-trash{
+  .tbl-edit-btn_Hotel .bi-pencil-square,
+  .tbl-del-btn_Hotel .bi-trash{
     width:calc(1rem + 2vh); 
     height:calc(1rem + 2vh);
+  }
+  .hotel-table .tbl-hotel-buttons_Hotel{
+    text-align: center;
   }
 }
 @media (max-width: 768px) {
@@ -286,43 +270,40 @@ body {
     width: 100%;
   }
   /*package table*/
-  .outer-activities-table{
+  .outer-hotel-table{
     padding-bottom: 10px;
   }
-  .activities-table td {
+  .hotel-table td {
     font-size: calc(.9rem + .25vh);
     text-align: center;
   }
-  .activities-table .activities-info-cell{
+  .hotel-table .hotel-info-cell{
     padding-top: 8vh;
     padding-bottom: 8vh;
   }
-  .activities-table .tbl-act-description,
-  .activities-table .tbl-act-address,
-  .activities-table .tbl-act-price,
-  .activities-table .tbl-act-duration,
-  .activities-table .tbl-act-max-slots{
+  .hotel-table .tbl-hotel-description,
+  .hotel-table .tbl-hotel-address{
     white-space: nowrap;
     padding: 10vh;
   }
-  .activities-table th {
+  .hotel-table th {
     font-size: calc(1rem + .5vh);
     padding: 30px 10px;
   }
-  .activities-circle-logo{
+  .hotel-circle-logo{
     width: calc(70px + .25vw);
     height: calc(69.38px + .25vh);
     align-content: center;
   }
-  .activities-table .tbl-act-buttons_Activities{
+  .hotel-table .tbl-hotel-buttons_Hotel{
     padding-top: 8vh;
     white-space: nowrap;
   }
-  .tbl-edit-btn_Activities{
+  .tbl-edit-btn_Hotel{
     margin-right: calc(.5rem + .25vw);
   }
-  .tbl-edit-btn_Activities,
-  .tbl-del-btn_Activities{
+  .tbl-edit-btn_Hotel,
+  .tbl-del-btn_Hotel{
     background-color: var(--primary-color);
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     border-radius: 100%;
@@ -331,8 +312,8 @@ body {
     border: none;
     margin-top: 15px;
   }
-  .tbl-edit-btn_Activities .bi-pencil-square,
-  .tbl-del-btn_Activities .bi-trash{
+  .tbl-edit-btn_Hotel .bi-pencil-square,
+  .tbl-del-btn_Hotel .bi-trash{
     width:calc(1rem + 2vh); 
     height:calc(1rem + 2vh);
   }
