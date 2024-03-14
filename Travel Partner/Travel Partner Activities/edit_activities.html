@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activties</title>
+
+    <!-- Font Awesome -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="edit_activities.css" />
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <nav id="sidebar">
+      <div class="d-flex justify-content-center">
+        <img src="Logo W.png" class="sidebar-logo" />
+      </div>
+
+      <ul class="sidebar-items list-unstyled px-3 d-flex flex-column">
+        <div class="sidebar-items-container">
+          <li>
+            <a href="#">
+              <i class="fas fa-info-circle"></i>
+              Overview
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-box-open"></i>
+              Packages
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-suitcase-rolling"></i>
+              Traveler Bookings
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-calendar-alt"></i>
+              Calendar
+            </a>
+          </li>
+        </div>
+        <div class="sidebar-items-container mt-5">
+          <li style="background-color: rgba(240, 240, 240, 0.2)">
+            <a href="#">
+              <i class="fas fa-skating"></i>
+              <!-- or any other activity-related icon -->
+              Activities
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-bed"></i>
+              Hotel
+            </a>
+          </li>
+          <li class="mt-5">
+            <a href="#">
+              <i class="fas fa-sign-out-alt"></i>
+              Sign Out
+            </a>
+          </li>
+        </div>
+      </ul>
+      <div class="bottom-sidebar">
+        <div class="profile-info d-flex">
+          <img
+            src="profile-picture.jpg"
+            alt="Profile Picture"
+            class="rounded-circle"
+            style="width: 50px; height: 50px"
+          />
+          <div class="user-info ml-2">
+            <p class="username mb-0">John Doe</p>
+            <p class="email mb-0">john@example.com</p>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div id="content">
+      <!-- Nav bar -->
+      <nav class="navbar navbar-expand-lg py-3">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" id="sidebarCollapse">
+            <span
+              class="navbar-toggler-icon d-flex align-items-center justify-content-center"
+            >
+              <i class="fas fa-bars"></i>
+            </span>
+          </button>
+          <div class="navbar-icons ml-auto d-flex mr-3">
+            <a href="#" class="mx-2"><i class="fas fa-bell fa-lg"></i></a>
+            <a href="#" class="mx-2"><i class="fas fa-cog fa-lg"></i></a>
+          </div>
+        </div>
+      </nav>
+      <!-- Nav bar ends here -->
+
+      <!-- Main Content -->
+      <div class="container-fluid p-3">
+        <h2 class="mb-1 page-header">Edit Activity</h2>
+        <div class="table-container d-flex flex-column">
+          <form id="editActivity">
+            <div class="table-body d-flex flex-column p-2">
+              <div class="row justify-content-between my-3">
+                <div class="row" id="edit-act-image-field">
+                  <div class="form-group">
+                    <label class="form-label">Insert Activity Image: </label>
+                    <input type="file" class="form-control-file" id="edit-activity-img">
+                  </div>
+                </div>
+                <div class="row mt-3" id="edit-act-title-field">
+                  <label class="form-label">Title</label>
+                  <input type="text" class="form-control" id="edit-activity-title" />
+                </div>
+                <div class="row" id="edit-act-address-field">
+                  <label class="form-label">Address</label>
+                  <input type="text" class="form-control" id="edit-activity-address" />
+                </div>
+                <div class="row" id="edit-act-description-field">
+                  <label class="form-label">Description</label>
+                  <textarea class="form-control" id="edit-activity-description" rows="3"></textarea>
+                </div>
+                <div class="row mt-3 pl-0  align-items-center">
+                  <div class="col-sm-2" id="edit-act-duration-field">
+                    <label class="form-label">Duration</label>
+                    <input type="number" class="form-control" id="edit-activity-duration" placeholder="1" />
+                  </div>
+                  <div class="col my-3" id="edit-act-duration-unit-field">
+                    <label class=" form-label">Units</label>
+                    <select class="custom-select" id="edit-activity-duration-units">
+                      <option value="1">Hours</option>
+                      <option value="2">Days</option>
+                      <option value="3">Months</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row mt-3 pl-0 align-items-center">
+                  <div class="col-sm-2" id="edit-act-price-field">
+                    <label class="form-label">Price</label>
+                    <input type="number" class="form-control" id="edit-activity-price" placeholder="1" />
+                  </div>
+                  <div class="col my-3" id="edit-act-price-unit-field">
+                    <label class="form-label">Units</label>
+                    <select class="custom-select" id="edit-activity-price-units">
+                      <option value="1">1 pax</option>
+                      <option value="2">2 pax</option>
+                      <option value="3">3 pax</option>
+                      <option value="4">4 pax</option>
+                      <option value="5">5 pax</option>
+                      <option value="6">5+ pax</option>
+                    </select>
+                  </div>
+                </div>
+                  <div class="col-sm-2 mt-3 pl-0 " id="edit-act-max-slots-field">
+                    <label class="form-label">Max slots</label>
+                    <input type="number" class="form-control" id="edit-activity-maxx-slots" placeholder="1" />
+                  </div>
+              </div>
+              
+              <div class="row justify-content-end my-3">
+                <div class="d-flex justify-content-end">
+                  <input
+                    type="button"
+                    class="btn btn-secondary py-2 px-4 mr-2 mt-4"
+                    id="cancelBtn"
+                    value="Cancel"
+                  />
+                  <input
+                    type="button"
+                    class="btn btn-primary py-2 px-4 ml-2 mt-4"
+                    id="saveEditActivityBtn"
+                    value="Save"
+                  />
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap Bundle with Popper.js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Date Range Picker Bundle -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
+    />
+
+    <!-- Custom Script in the bottom to work -->
+    <script src="script.js"></script>
+    <script src="edit_Activity.js"></script>
+  </body>
+</html>

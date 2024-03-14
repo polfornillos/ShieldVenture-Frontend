@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activities</title>
+
+    <!-- Font Awesome -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <nav id="sidebar">
+      <div class="d-flex justify-content-center">
+        <img src="Logo W.png" class="sidebar-logo" />
+      </div>
+
+      <ul class="sidebar-items list-unstyled px-3 d-flex flex-column">
+        <div class="sidebar-items-container">
+          <li>
+            <a href="#">
+              <i class="fas fa-info-circle"></i>
+              Overview
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-box-open"></i>
+              Packages
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-suitcase-rolling"></i>
+              Traveler Bookings
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-calendar-alt"></i>
+              Calendar
+            </a>
+          </li>
+        </div>
+        <div class="sidebar-items-container mt-5">
+          <li style="background-color: rgba(240, 240, 240, 0.2);">
+            <a href="#">
+              <i class="fas fa-skating"></i>
+              <!-- or any other activity-related icon -->
+              Activities
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-bed"></i>
+              Hotel
+            </a>
+          </li>
+          <li class="mt-5">
+            <a href="#">
+              <i class="fas fa-sign-out-alt"></i>
+              Sign Out
+            </a>
+          </li>
+        </div>
+      </ul>
+      <div class="bottom-sidebar">
+        <div class="profile-info d-flex">
+          <img src="profile-picture.jpg" alt="Profile Picture" class="rounded-circle" style="width: 50px; height: 50px" />
+          <div class="user-info ml-2">
+            <p class="username mb-0">John Doe</p>
+            <p class="email mb-0">john@example.com</p>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div id="content">
+      <!-- Nav bar -->
+      <nav class="navbar navbar-expand-lg py-3">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" id="sidebarCollapse">
+            <span class="navbar-toggler-icon d-flex align-items-center justify-content-center">
+              <i class="fas fa-bars"></i>
+            </span>
+          </button>
+          <div class="navbar-icons ml-auto d-flex mr-3">
+            <a href="#" class="mx-2"><i class="fas fa-bell fa-lg"></i></a>
+            <a href="#" class="mx-2"><i class="fas fa-cog fa-lg"></i></a>
+          </div>
+        </div>
+      </nav>
+      <!-- Nav bar ends here -->
+
+      <!-- Main Content -->
+      <div class="container-fluid p-3">
+        <div class="add-activities-div">
+          <button class="btn btn-primary mt-5">Add Activities</button>
+        </div>
+        <div class="outer-activities-table">
+            <table class="table table-striped activities-table">
+                <tr>
+                    <th>Activity</th>
+                    <th>Description</th>
+                    <th>Address</th>
+                    <th>Duration</th>
+                    <th>Price</th>
+                    <th>Max Slots</th>
+                    <th></th><!--edit/delete button column-->
+                </tr>
+                <tr>
+                    <td class="activities-info-cell">
+                      <img src="cebu.jpg" class="activities-circle-logo col-sm-1">
+                      <span class="tbl-activity-name col-sm-1">Parasailing</span></td>
+                    <td class="tbl-act-description">3D2N Discover Boracay's Beauty</td>
+                    <td class="tbl-act-address">Street:  12 Evangelista St., Brgy. Santolan,
+                      City:El Nido
+                      Province: Palawan
+                      Phone number:  (02) 646-2186
+                      City Code: 5313
+                      Country:  Philippines</td>
+                    <td class="tbl-act-duration">5 hours</td>
+                    <td class="tbl-act-price">50 1 pax</td>
+                    <td class="tbl-act-max-slots">5</td>
+                    <td class="tbl-act-duration_Activities">
+                      <button class="tbl-edit-btn_Activities">
+                        <svg xmlns="http://www.w3.org/2000/svg"  fill="white" class="bi bi-pencil-square" viewBox="0 -2 16 20">
+                          <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                          <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                        </svg>
+                      </button>
+                      <button class="tbl-del-btn_Activities">
+                        <svg xmlns="http://www.w3.org/2000/svg"  fill="white" class="bi bi-trash" viewBox="0 -2 16 20">
+                          <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
+                          <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
+                        </svg>
+                      </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="activities-info-cell">
+                      <img src="boracay.png" class="activities-circle-logo col-sm-1">
+                      <span class="tbl-activity-name col-sm-1">Island hopping</span></td>
+                    <td class="tbl-act-description">Enchanting El Nido Escape</td>
+                    <td class="tbl-act-address">Street:  12 Evangelista St., Brgy. Santolan,
+                      City:El Nido
+                      Province: Palawan
+                      Phone number:  (02) 646-2186
+                      City Code: 5313
+                      Country:  Philippines</td>
+                    <td class="tbl-act-duration">5 hours</td>
+                    <td class="tbl-act-price">50 1 pax</td>
+                    <td class="tbl-act-max-slots">5</td>
+                    <td class="tbl-act-duration_Activities">
+                      <button class="tbl-edit-btn_Activities">
+                        <svg xmlns="http://www.w3.org/2000/svg"  fill="white" class="bi bi-pencil-square" viewBox="0 -2 16 20">
+                          <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                          <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                        </svg>
+                      </button>
+                      <button class="tbl-del-btn_Activities">
+                        <svg xmlns="http://www.w3.org/2000/svg"  fill="white" class="bi bi-trash" viewBox="0 -2 16 20">
+                          <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
+                          <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
+                        </svg>
+                      </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="activities-info-cell">
+                      <img src="baguio.jpg" class="activities-circle-logo col-sm-1">
+                      <span class="tbl-activity-name col-sm-1">Camping</span></td>
+                    <td class="tbl-act-description">Bohol Bliss Retreat</td>
+                    <td class="tbl-act-address">Street:  12 Evangelista St., Brgy. Santolan,
+                      City:El Nido
+                      Province: Palawan
+                      Phone number:  (02) 646-2186
+                      City Code: 5313
+                      Country:  Philippines</td>
+                    <td class="tbl-act-duration">5 days</td>
+                    <td class="tbl-act-price">50 1 pax</td>
+                    <td class="tbl-act-max-slots">5</td>
+                    <td class="tbl-act-duration_Activities">
+                      <button class="tbl-edit-btn_Activities">
+                        <svg xmlns="http://www.w3.org/2000/svg"  fill="white" class="bi bi-pencil-square" viewBox="0 -2 16 20">
+                          <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                          <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                        </svg>
+                      </button>
+                      <button class="tbl-del-btn_Activities">
+                        <svg xmlns="http://www.w3.org/2000/svg"  fill="white" class="bi bi-trash" viewBox="0 -2 16 20">
+                          <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
+                          <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
+                        </svg>
+                      </button>
+                    </td>
+                </tr>
+            </table>
+          </div>
+          <!--end of table div-->
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap Bundle with Popper.js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Date Range Picker Bundle -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+    <!-- Custom Script in the bottom to work -->
+    <script src="script.js"></script>
+  </body>
+</html>
