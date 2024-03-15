@@ -19,7 +19,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="add_booking.css" />
+    <link rel="stylesheet" href="edit_booking.css" />
   </head>
   <body>
     <!-- Sidebar -->
@@ -115,77 +115,80 @@
 
       <!-- Main Content -->
       <div class="container-fluid p-3">
-        <h2 class="mb-1 page-header">Add Bookings</h2>
+        <h2 class="mb-1 page-header">Edit Bookings</h2>
         <div class="table-container d-flex flex-column">
-          <form id="addBooking">
+          <form id="editBooking">
             <div class="table-body d-flex flex-column p-2">
               <div class="row justify-content-between my-3">
-                <div class="col" id="first-name-field">
-                  <label class="form-label">First Name</label>
-                  <input type="text" class="form-control" id="f-name" />
+                <div class="col-lg-4" id="edit-first-name-field">
+                  <label class="form-label mt-3">First Name</label>
+                  <p class="data-field" id="edit-initial-f-name">Samantha</p>
+                  <input type="text" placeholder="Edit Firstname here" class="form-control" id="edit-f-name" />
                 </div>
-                <div class="col" id="middle-name-field">
+                <div class="col-lg-4 mt-3" id="edit-middle-name-field">
                   <label class="form-label">Middle Name</label>
-                  <input type="text" class="form-control" id="m-name" />
+                  <p class="data-field" id="edit-initial-m-name">Anne</p>
+                  <input type="text" placeholder="Edit Middlename here" class="form-control" id="edit-m-name" />
                 </div>
-                <div class="col" id="last-name-field">
+                <div class="col-lg-4 mt-3" id="edit-last-name-field">
                   <label class="form-label">Last Name</label>
-                  <input type="text" class="form-control" id="l-name" />
+                  <p class="data-field" id="edit-initial-l-name">Cruz</p>
+                  <input type="text" placeholder="Edit Lastname here" class="form-control" id="edit-l-name" />
                 </div>
               </div>
-              <div class="row justify-content-between my-3">
-                <div class="col" id="email-field">
+              <div class="row justify-content-start my-3">
+                <div class="col" id="edit-email-field">
                   <label class="form-label">Email</label>
-                  <input type="email" class="form-control" id="package-name" />
+                  <p class="data-field" id="edit-initial-email-name">samanthacruz@gmail.com</p>
+                  <input type="text" placeholder="Edit Email here" class="form-control" id="edit-email" />
                 </div>
-                <div class="col" id="package-name-field">
+                <div class="col" id="edit-package-name-field">
                   <label class="form-label">Package Name</label>
-                  <input type="text" class="form-control" id="package-name" />
+                  <p class="data-field" id="package-name">
+                    3D2N Discover Boracay's Beauty
+                  </p>
+                </div>
+                <div class="col align-self-center">
+                  <a
+                    href="#"
+                    id="viewPackage"
+                    class="btn btn-primary py-2 px-4 view-package-btn"
+                  >
+                    View Package
+                  </a>
                 </div>
               </div>
-              <div class="row justify-content-between my-3">
-                <div class="col-lg-5">
+              <div class="row justify-content-start my-3">
+                <div class="col-lg-4" id="edit-s-date-field">
                   <label class="form-label">Start date</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="start_date"
-                    name="start_date"
-                    role="button"
-                    autocomplete="off"
-                  />
+                  <p class="data-field" id="edit-initial-s-date">Mar 08, 2024</p>
+                  <input type="text" placeholder="Edit Start date here" class="form-control" id="edit-s-date" />
                 </div>
-                <div class="col-lg-5">
+                <div class="col-lg-4" id="edit-e-date-field">
                   <label class="form-label">End date</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="end_date"
-                    name="end_date"
-                    role="button"
-                    autocomplete="off"
-                  />
+                  <p class="data-field" id="edit-initial-e-date">Mar 10, 2024</p>
+                  <input type="text" placeholder="Edit End date here" class="form-control" id="edit-e-date" />
                 </div>
               </div>
               <div class="row justify-content-end my-3">
-                <div class="d-flex justify-content-end">
+                <div class="d-flex justify-content-start">
                   <input
                     type="button"
                     class="btn btn-secondary py-2 px-4 mr-2 mt-4"
                     id="cancelBtn"
-                    value="Cancel"
-                  />
-                  <input
+                    value="Go Back"
+                    />
+                    <input
                     type="button"
                     class="btn btn-primary py-2 px-4 ml-2 mt-4"
-                    id="saveAddBookingBtn"
+                    id="saveEditBookingBtn"
                     value="Save"
                   />
+                  </div>
                 </div>
               </div>
             </div>
           </form>
-        </div>
       </div>
     </div>
 
@@ -217,6 +220,6 @@
 
     <!-- Custom Script in the bottom to work -->
     <script src="script.js"></script>
-    <script src="add_booking.js"></script>
+    <script src="edit_booking.js"></script>
   </body>
 </html>

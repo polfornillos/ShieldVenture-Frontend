@@ -43,7 +43,7 @@
     }
   );
 });
-
+*/
 $(window)
   .resize(function () {
     console.log("resize called");
@@ -63,4 +63,3 @@ $(window)
     }
   })
   .resize();
-*/
