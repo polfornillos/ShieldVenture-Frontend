@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Packages</title>
+    <title>Hotel</title>
 
     <!-- Font Awesome -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" rel="stylesheet" />
@@ -29,7 +29,7 @@
               Overview
             </a>
           </li>
-          <li style="background-color: rgba(240, 240, 240, 0.2);">
+          <li>
             <a href="#">
               <i class="fas fa-box-open"></i>
               Packages
@@ -56,7 +56,7 @@
               Activities
             </a>
           </li>
-          <li>
+          <li style="background-color: rgba(240, 240, 240, 0.2);">
             <a href="#">
               <i class="fas fa-bed"></i>
               Hotel
@@ -101,33 +101,36 @@
 
       <!-- Main Content -->
       <div class="container-fluid p-3">
-        <div class="add-package-div_packages">
-          <button class="btn btn-primary mt-5">Add Package</button>
+        <div class="add-hotel-div">
+          <button class="btn btn-primary mt-5">Add Hotels</button>
         </div>
-        <div class="outer-package-table">
-            <table class="table table-striped package-table">
+        <div class="outer-hotel-table">
+            <table class="table table-striped hotel-table">
                 <tr>
-                    <th>Travel Package</th>
-                    <th>Date Created</th>
-                    <th>Last Update</th>
-                    <th>Status</th>
+                    <th>Hotel</th>
+                    <th>Description</th>
+                    <th>Address</th>
                     <th></th><!--edit/delete button column-->
                 </tr>
                 <tr>
-                    <td class="d-flex travel-package-cell_packages">
-                      <img src="boracay.png" class="package-circle-logo">
-                      <span class="tbl-package-title_packages">3D2N Discover Boracay's Beauty</span></td>
-                    <td class="tbl-date-created_packages">January 1, 2023</td>
-                    <td class="tbl-date-last_packages">January 9, 2023</td>
-                    <td class="tbl-status_packages">Available</td>
-                    <td class="tbl-edit-del-btns_packages">
-                      <button class="tbl-edit-btn_packages">
+                    <td class="hotel-info-cell">
+                      <img src="cebu.jpg" class="hotel-circle-logo col-sm-1">
+                      <span class="tbl-hotel-name col-sm-1">Hotel 626</span></td>
+                    <td class="tbl-hotel-description">3D2N Discover Boracay's Beauty</td>
+                    <td class="tbl-hotel-address">Street:  12 Evangelista St., Brgy. Santolan,
+                      City:El Nido
+                      Province: Palawan
+                      Phone number:  (02) 646-2186
+                      City Code: 5313
+                      Country:  Philippines</td>
+                    <td class="tbl-hotel-buttons_Hotel">
+                      <button class="tbl-edit-btn_Hotel">
                         <svg xmlns="http://www.w3.org/2000/svg"  fill="white" class="bi bi-pencil-square" viewBox="0 -2 16 20">
                           <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
                           <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
                         </svg>
                       </button>
-                      <button class="tbl-del-btn_packages">
+                      <button class="tbl-del-btn_Hotel">
                         <svg xmlns="http://www.w3.org/2000/svg"  fill="white" class="bi bi-trash" viewBox="0 -2 16 20">
                           <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
                           <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
@@ -136,20 +139,24 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="d-flex travel-package-cell_packages">
-                      <img src="baguio.jpg" class="package-circle-logo">
-                      <span class="tbl-package-title_packages">Enchanting El Nido Escape</span></td>
-                    <td class="tbl-date-created_packages">Febuary 18, 2023</td>
-                    <td class="tbl-date-last_packages">March 9, 2023</td>
-                    <td class="tbl-status_packages">Available</td>
-                    <td class="tbl-edit-del-btns_packages">
-                      <button class="tbl-edit-btn_packages">
+                    <td class="hotel-info-cell">
+                      <img src="boracay.png" class="hotel-circle-logo col-sm-1">
+                      <span class="tbl-hotel-name col-sm-1">Island hopping</span></td>
+                    <td class="tbl-hotel-description">Hotelgo</td>
+                    <td class="tbl-hotel-address">Street:  12 Evangelista St., Brgy. Santolan,
+                      City:El Nido
+                      Province: Palawan
+                      Phone number:  (02) 646-2186
+                      City Code: 5313
+                      Country:  Philippines</td>
+                    <td class="tbl-hotel-buttons_Hotel">
+                      <button class="tbl-edit-btn_Hotel">
                         <svg xmlns="http://www.w3.org/2000/svg"  fill="white" class="bi bi-pencil-square" viewBox="0 -2 16 20">
                           <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
                           <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
                         </svg>
                       </button>
-                      <button class="tbl-del-btn_packages">
+                      <button class="tbl-del-btn_Hotel">
                         <svg xmlns="http://www.w3.org/2000/svg"  fill="white" class="bi bi-trash" viewBox="0 -2 16 20">
                           <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
                           <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
@@ -158,20 +165,24 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="d-flex travel-package-cell_packages">
-                      <img src="cebu.jpg" class="package-circle-logo">
-                      <span class="tbl-package-title_packages">Bohol Bliss Retreat</span></td>
-                    <td class="tbl-date-created_packages">April 7, 2023</td>
-                    <td class="tbl-date-last_packages">April 8, 2023</td>
-                    <td class="tbl-status_packages">Available</td>
-                    <td class="tbl-edit-del-btns_packages">
-                      <button class="tbl-edit-btn_packages">
+                    <td class="hotel-info-cell">
+                      <img src="baguio.jpg" class="hotel-circle-logo col-sm-1">
+                      <span class="tbl-hotel-name col-sm-1">Hotel san jose</span></td>
+                    <td class="tbl-hotel-description">Bohol Bliss Retreat</td>
+                    <td class="tbl-hotel-address">Street:  12 Evangelista St., Brgy. Santolan,
+                      City:El Nido
+                      Province: Palawan
+                      Phone number:  (02) 646-2186
+                      City Code: 5313
+                      Country:  Philippines</td>
+                    <td class="tbl-hotel-buttons_Hotel">
+                      <button class="tbl-edit-btn_Hotel">
                         <svg xmlns="http://www.w3.org/2000/svg"  fill="white" class="bi bi-pencil-square" viewBox="0 -2 16 20">
                           <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
                           <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
                         </svg>
                       </button>
-                      <button class="tbl-del-btn_packages">
+                      <button class="tbl-del-btn_Hotel">
                         <svg xmlns="http://www.w3.org/2000/svg"  fill="white" class="bi bi-trash" viewBox="0 -2 16 20">
                           <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
                           <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Traveler Bookings</title>
+    <title>Hotel</title>
 
     <!-- Font Awesome -->
     <link
@@ -19,7 +19,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="add_booking.css" />
+    <link rel="stylesheet" href="edit_hotel.css" />
   </head>
   <body>
     <!-- Sidebar -->
@@ -42,7 +42,7 @@
               Packages
             </a>
           </li>
-          <li style="background-color: rgba(240, 240, 240, 0.2)">
+          <li>
             <a href="#">
               <i class="fas fa-suitcase-rolling"></i>
               Traveler Bookings
@@ -63,7 +63,7 @@
               Activities
             </a>
           </li>
-          <li>
+          <li style="background-color: rgba(240, 240, 240, 0.2)">
             <a href="#">
               <i class="fas fa-bed"></i>
               Hotel
@@ -115,65 +115,49 @@
 
       <!-- Main Content -->
       <div class="container-fluid p-3">
-        <h2 class="mb-1 page-header">View Bookings</h2>
+        <h2 class="mb-1 page-header">Edit Hotel</h2>
         <div class="table-container d-flex flex-column">
-          <div class="table-body d-flex flex-column p-2">
-            <div class="row justify-content-between my-3">
-              <div class="col" id="first-name-field">
-                <label class="form-label">First Name</label>
-                <p class="data-field" id="f-name">Samantha</p>
+          <form id="editHotel">
+            <div class="table-body d-flex flex-column p-2">
+              <div class="row justify-content-between my-3">
+                <div class="row" id="edit-hotel-image-field">
+                  <div class="form-group">
+                    <label class="form-label">Insert Hotel Image: </label>
+                    <input type="file" class="form-control-file" id="edit-hotel-img">
+                  </div>
+                </div>
+                <div class="row mt-3" id="edit-hotel-title-field">
+                  <label class="form-label">Hotel Name</label>
+                  <input type="text" class="form-control" id="edit-hotel-name" />
+                </div>
+                <div class="row" id="edit-hotel-address-field">
+                  <label class="form-label">Address</label>
+                  <input type="text" class="form-control" id="edit-hotel-address" />
+                </div>
+                <div class="row" id="edit-hotel-description-field">
+                  <label class="form-label">Description</label>
+                  <textarea class="form-control" id="edit-hotel-description" rows="3"></textarea>
+                </div>
               </div>
-              <div class="col" id="middle-name-field">
-                <label class="form-label">Middle Name</label>
-                <p class="data-field" id="m-name">Anne</p>
-              </div>
-              <div class="col" id="last-name-field">
-                <label class="form-label">Last Name</label>
-                <p class="data-field" id="l-name">Cruz</p>
-              </div>
-            </div>
-            <div class="row justify-content-start my-3">
-              <div class="col" id="email-field">
-                <label class="form-label">Email</label>
-                <p class="data-field" id="email">samanthacruz@gmail.com</p>
-              </div>
-              <div class="col" id="package-name-field">
-                <label class="form-label">Package Name</label>
-                <p class="data-field" id="package-name">
-                  3D2N Discover Boracay's Beauty
-                </p>
-              </div>
-              <div class="col align-self-center">
-                <a
-                  href="#"
-                  id="viewPackage"
-                  class="btn btn-primary py-2 px-4 view-package-btn"
-                >
-                  View Package
-                </a>
-              </div>
-            </div>
-            <div class="row justify-content-start my-3">
-              <div class="col-lg-4" id="s-date-field">
-                <label class="form-label">Start date</label>
-                <p class="data-field" id="s-date">Mar 08, 2024</p>
-              </div>
-              <div class="col-lg-4" id="e-date-field">
-                <label class="form-label">End date</label>
-                <p class="data-field" id="e-date">Mar 10, 2024</p>
+              
+              <div class="row justify-content-end my-3">
+                <div class="d-flex justify-content-end">
+                  <input
+                    type="button"
+                    class="btn btn-secondary py-2 px-4 mr-2 mt-4"
+                    id="cancelBtn"
+                    value="Cancel"
+                  />
+                  <input
+                    type="button"
+                    class="btn btn-primary py-2 px-4 ml-2 mt-4"
+                    id="saveEditHotelBtn"
+                    value="Save"
+                  />
+                </div>
               </div>
             </div>
-            <div class="row justify-content-end my-3">
-              <div class="d-flex justify-content-start">
-                <input
-                  type="button"
-                  class="btn btn-secondary py-2 px-4 mr-2 mt-4"
-                  id="cancelBtn"
-                  value="Go Back"
-                />
-              </div>
-            </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>
@@ -206,6 +190,6 @@
 
     <!-- Custom Script in the bottom to work -->
     <script src="script.js"></script>
-    <script src="view_booking.js"></script>
+    <script src="edit_hotel.js"></script>
   </body>
 </html>
